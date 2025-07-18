@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
+import { Link } from 'wouter';
 import { 
   Phone, 
   Mail, 
@@ -37,6 +38,7 @@ const Footer = () => {
                 src="/lovable-uploads/9ccc5ea8-9e5f-4dd2-a295-579bca72f167.png" 
                 alt="Omaha Auto Glass Repair" 
                 className="h-10 w-auto"
+                loading="lazy"
               />
               <div>
                 <h3 className="text-lg font-bold">Omaha Auto Glass Repair</h3>
@@ -77,28 +79,28 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-6">Our Services</h4>
             <ul className="space-y-3">
               <li>
-                <a 
-                  href="/services" 
+                <Link 
+                  to="/services" 
                   className="text-white/80 hover:text-primary transition-colors"
                 >
                   Rock Chip Repair Service
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="/dealership-services" 
+                <Link 
+                  to="/dealership-services" 
                   className="text-white/80 hover:text-primary transition-colors"
                 >
                   Dealership Lot Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="/fleet-services" 
+                <Link 
+                  to="/fleet-services" 
                   className="text-white/80 hover:text-primary transition-colors"
                 >
                   Commercial Fleet Services
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -205,12 +207,12 @@ const Footer = () => {
           </div>
 
           <div className="flex space-x-6 text-sm">
-            <a href="/privacy-policy" className="text-white/80 hover:text-primary transition-colors">
+            <Link to="/privacy-policy" className="text-white/80 hover:text-primary transition-colors">
               Privacy Policy
-            </a>
-            <a href="/terms-of-service" className="text-white/80 hover:text-primary transition-colors">
+            </Link>
+            <Link to="/terms-of-service" className="text-white/80 hover:text-primary transition-colors">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>

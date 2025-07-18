@@ -34,6 +34,7 @@ const Header = () => {
               src="/lovable-uploads/9ccc5ea8-9e5f-4dd2-a295-579bca72f167.png" 
               alt="Omaha Auto Glass Repair" 
               className="h-10 w-auto"
+              loading="eager"
             />
             <div className="hidden sm:block">
               <h1 className="text-lg font-bold text-foreground">
@@ -105,9 +106,14 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <a href="/contact" className="text-foreground hover:text-primary transition-colors duration-200 font-medium border-b-2 border-transparent hover:border-primary pb-1">
+            <Link 
+              to="/contact" 
+              className={`text-foreground hover:text-primary transition-colors duration-200 font-medium border-b-2 border-transparent hover:border-primary pb-1 ${
+                location === '/contact' ? 'text-primary' : ''
+              }`}
+            >
               Contact
-            </a>
+            </Link>
           </nav>
 
           {/* Phone Number & CTA */}
@@ -120,7 +126,7 @@ const Header = () => {
               <span className="font-semibold">(402) 302-2284</span>
             </a>
             <Button variant="default" className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded-full font-medium" asChild>
-              <a href="/quote">Get Quote</a>
+              <Link to="/quote">Get Quote</Link>
             </Button>
           </div>
 

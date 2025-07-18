@@ -90,6 +90,7 @@ const Services = () => {
             src="/lovable-uploads/ChatGPT Image Jul 17, 2025, 04_03_56 PM.png" 
             alt="Background" 
             className="w-full h-full object-cover opacity-20 blur-sm"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 to-slate-800/70 backdrop-blur-sm"></div>
         </div>

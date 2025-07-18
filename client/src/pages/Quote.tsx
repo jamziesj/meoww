@@ -118,6 +118,7 @@ Submitted on: ${new Date().toLocaleString()}
                                 src="/newrwin.png" 
                                 alt="Windshield with large damage" 
                                 className="w-full h-full object-cover scale-150"
+                                loading="lazy"
                               />
                             </div>
                             <h3 className="font-semibold mb-2">My damage is larger than 6 inches</h3>
@@ -144,6 +145,7 @@ Submitted on: ${new Date().toLocaleString()}
                                 src="/newgwin.png" 
                                 alt="Windshield with small chips and cracks" 
                                 className="w-full h-full object-cover scale-150"
+                                loading="lazy"
                               />
                             </div>
                             <h3 className="font-semibold mb-2">I have three or fewer chips/cracks smaller than 6 inches</h3>

@@ -16,6 +16,7 @@ const About = () => {
             src="/lovable-uploads/ChatGPT Image Jul 17, 2025, 04_03_56 PM copy.png" 
             alt="Background" 
             className="w-full h-full object-cover opacity-40 blur-[1px]"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 to-slate-800/60"></div>
         </div>
@@ -44,6 +45,7 @@ const About = () => {
                       src="/lovable-uploads/9ccc5ea8-9e5f-4dd2-a295-579bca72f167.png" 
                       alt="Omaha Auto Glass Repair Logo" 
                       className="h-16 w-auto"
+                      loading="lazy"
                     />
                   </div>
                 </div>

@@ -74,6 +74,7 @@ const Hero = () => {
                     src="/lovable-uploads/9ccc5ea8-9e5f-4dd2-a295-579bca72f167.png" 
                     alt="Omaha Auto Glass Repair" 
                     className="h-20 w-auto"
+                    loading="lazy"
                   />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">
