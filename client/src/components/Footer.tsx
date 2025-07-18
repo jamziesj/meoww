@@ -16,7 +16,7 @@ const Footer = () => {
 
   const serviceAreas = [
     'Omaha', 'Bellevue', 'Papillion', 'La Vista', 'Gretna',
-    'Elkhorn', 'Millard', 'Ralston', 'Chalco', 'Boys Town'
+    'Elkhorn', 'Millard', 'Ralston', 'Chalco', 'Bennington'
   ];
 
   const services = [
@@ -67,7 +67,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="h-5 w-5 text-primary" />
-                <span>24/7 Emergency Service</span>
+                <span>Flexible Emergency Service</span>
               </div>
             </div>
           </div>
@@ -139,27 +139,7 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Business Hours */}
-            <div className="mb-6">
-              <h5 className="font-semibold mb-3">Business Hours</h5>
-              <div className="space-y-2 text-sm text-white/80">
-                <div className="flex justify-between">
-                  <span>Monday - Friday:</span>
-                  <span>7AM - 7PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Saturday:</span>
-                  <span>8AM - 5PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Sunday:</span>
-                  <span>9AM - 4PM</span>
-                </div>
-                <div className="text-primary font-medium">
-                  Emergency Service: 24/7
-                </div>
-              </div>
-            </div>
+
 
             {/* Social Media */}
             <div>
@@ -189,16 +169,15 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-3 mb-2 md:mb-0">
               <Clock className="h-5 w-5" />
-              <span className="font-semibold">Need Emergency Auto Glass Service?</span>
-              <span className="text-sm block">Text us for urgent service</span>
+              <span className="font-semibold">Call Us for Urgent Service</span>
             </div>
             <Button 
               className="bg-white text-primary hover:bg-white/90 rounded-full font-semibold"
               asChild
             >
-              <a href="sms:402-302-2284" className="flex items-center space-x-2">
+              <a href="tel:402-302-2284" className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>Text (402) 302-2284 Now</span>
+                <span>Call (402) 302-2284 Now</span>
               </a>
             </Button>
           </div>

@@ -53,11 +53,6 @@ const FleetServices = () => {
       icon: FileText,
       title: "Consolidated Invoicing",
       description: "No need to track multiple service calls — one invoice per visit."
-    },
-    {
-      icon: Users,
-      title: "Maintenance Tracking",
-      description: "Each windshield repair is logged by vehicle ID for your internal records."
     }
   ];
 
@@ -143,8 +138,8 @@ const FleetServices = () => {
               <h3 className="text-2xl font-bold text-foreground mb-8 text-center">
                 Why Fleet Managers Choose Our Mobile Glass Service
               </h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                {benefits.map((benefit, index) => (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {benefits.slice(0, 3).map((benefit, index) => (
                   <Card key={index} className="border hover:border-primary/50 transition-colors">
                     <CardHeader className="text-center pb-4">
                       <div className="w-12 h-12 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
@@ -160,7 +155,7 @@ const FleetServices = () => {
                   </Card>
                 ))}
               </div>
-              {/* Center the bottom two cards */}
+              {/* Center the remaining cards */}
               <div className="flex justify-center mt-6">
                 <div className="grid md:grid-cols-2 gap-6 max-w-2xl">
                   {benefits.slice(3).map((benefit, index) => (
@@ -236,12 +231,13 @@ const FleetServices = () => {
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4"
+                  className="border-primary-foreground text-primary-foreground hover:text-primary hover:bg-primary-foreground px-8 py-4 relative overflow-hidden group"
                   asChild
                 >
                   <a href="mailto:info@autoglassomaha.com" className="flex items-center space-x-2">
-                    <Mail className="h-5 w-5" />
-                    <span>Email Us</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary-light to-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
+                    <Mail className="h-5 w-5 relative z-10" />
+                    <span className="relative z-10">Email Us</span>
                   </a>
                 </Button>
               </div>

@@ -206,25 +206,12 @@ Submitted on: ${new Date().toLocaleString()}
                       <div>
                         <h3 className="font-semibold text-foreground">Service Area</h3>
                         <p className="text-muted-foreground">
-                          Omaha, Bellevue, Papillion, La Vista, Gretna, Elkhorn, and surrounding areas
+                          Omaha, Bellevue, Papillion, La Vista, Gretna, Elkhorn, Bennington, and surrounding areas
                         </p>
                       </div>
                     </div>
 
-                    <div className="flex items-center space-x-4 p-4 bg-primary/5 rounded-xl border border-primary/10">
-                      <div className="bg-primary text-primary-foreground p-3 rounded-full">
-                        <Clock className="h-5 w-5" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground">Business Hours</h3>
-                        <div className="text-muted-foreground text-sm space-y-1">
-                          <div>Monday - Friday: 7AM - 7PM</div>
-                          <div>Saturday: 8AM - 5PM</div>
-                          <div>Sunday: 9AM - 4PM</div>
-                          <div className="text-primary font-medium">Emergency Service: 24/7</div>
-                        </div>
-                      </div>
-                    </div>
+
                   </CardContent>
                 </Card>
 

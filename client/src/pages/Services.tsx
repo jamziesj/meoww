@@ -102,10 +102,7 @@ const Services = () => {
               Professional rock chip repair that saves you money and time
             </p>
             <div className="flex items-center justify-center space-x-1 mb-6">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-5 w-5 fill-primary-light text-primary-light" />
-              ))}
-              <span className="text-primary-foreground/80 ml-2">Trusted by Omaha drivers</span>
+              <span className="text-primary-foreground/80">Trusted by Omaha drivers</span>
             </div>
           </div>
         </div>
@@ -197,18 +194,20 @@ const Services = () => {
             <Button 
               size="lg" 
               className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 text-lg font-semibold"
+              asChild
             >
-              Get Free Quote
+              <a href="/quote">Get Free Quote</a>
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4 text-lg font-semibold"
+              className="border-primary-foreground text-primary-foreground hover:text-primary hover:bg-primary-foreground px-8 py-4 text-lg font-semibold relative overflow-hidden group"
               asChild
             >
               <a href="tel:402-302-2284" className="flex items-center space-x-2">
-                <Phone className="h-5 w-5" />
-                <span>Call Now</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary-light to-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
+                <Phone className="h-5 w-5 relative z-10" />
+                <span className="relative z-10">Call Now</span>
               </a>
             </Button>
           </div>
