@@ -1,0 +1,72 @@
+
+✅ Combined Web Update Prompt:
+
+Make the following updates across the website:
+
+    Design Adjustments:
+
+        Reduce the blur behind the image on the "About Me" page title section so the image colors show through more clearly.
+
+        Update the blue background to maintain visibility while enhancing contrast.
+
+        Center the bottom two sales point boxes on the "Chip Repair for Car Dealerships" page.
+
+        On the same page, change the text "24/7 On Site Mobile Glass Service" to "Flexible On-Site Mobile Glass Service".
+
+        On the "Fleet Service" and "Used Car Service" pages, make the "Email Us" buttons have black text by default and apply a wave-wash hover effect—matching the "Call Us Today" button on the homepage hero section.
+
+        Apply the same hover effect to the "Call Now" button at the bottom of the "Rock Chip Repair Service" page.
+
+        Remove the empty stars before "Trusted by Omaha Drivers" on the "Windshield Chip Repair Services" page.
+
+    Content and Link Updates:
+
+        Replace Boys Town with Bennington in both the Google Maps embed and the footer service area list.
+
+        Change "Need Emergency Auto Glass Service?" at the bottom of the site to "Call Us for Urgent Service".
+
+        Change the "Text Number Now" button to a "Call Number Now" button.
+
+        Route the "Get a Free Quote" button at the bottom of the chip repair page to the /quotes page.
+
+    Quote Page Image and Layout:
+
+        Replace the quote page images:
+
+            "My damage is larger than 6 inches" ➝ newrwin.png
+
+            "I have three or fewer chips/cracks smaller than 6 inches" ➝ newgwin.png
+
+        Zoom into each image so the windshields are fully in view.
+
+    Fleet Page Cleanup:
+
+        Center the middle two sales boxes on the Fleet page.
+
+        Remove the duplicate boxes for "Consolidated Invoicing" and "Maintenance Tracking".
+
+    General Content Clean-Up:
+
+        Remove all mentions of business hours across the website.
+
+        Replace "24/7 Emergency Service" at the bottom with "Flexible Emergency Service".
+
+    Branding:
+
+        Replace the existing logo site-wide with the newly uploaded one.
+
+        Fully remove the old logo from the codebase and asset files.
+
+    Performance Optimization & Stability Measures (Agent Tasks):
+
+        Minify all CSS and JavaScript files.
+
+        Enable lazy loading for images across the site.
+
+        Compress all images without significant quality loss.
+
+        Remove any unused or redundant code files and assets.
+
+        Ensure all external scripts are loaded asynchronously or deferred.
+
+        Verify and fix broken links, outdated imports, or excessive DOM elements.
