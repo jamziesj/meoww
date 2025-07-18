@@ -51,9 +51,9 @@ const Services = () => {
     {
       icon: Zap,
       title: "Emergency Service",
-      description: "24/7 emergency auto glass repair for urgent situations and safety concerns.",
-      features: ["24/7 Availability", "Emergency Response", "Safety First", "Immediate Service"],
-      badge: "24/7"
+      description: "Flexible emergency auto glass repair for urgent situations and safety concerns.",
+      features: ["Flexible Availability", "Emergency Response", "Safety First", "Immediate Service"],
+      badge: "Flexible"
     }
   ];
 

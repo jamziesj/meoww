@@ -46,7 +46,7 @@ const FleetServices = () => {
     },
     {
       icon: Calendar,
-      title: "Convenient 24/7 Scheduling",
+      title: "Convenient Flexible Scheduling",
       description: "We work around your hours to service fleets day or night."
     },
     {
@@ -87,7 +87,7 @@ const FleetServices = () => {
               Fleet Windshield Chip Repair & Maintenance
             </h1>
             <h2 className="text-xl md:text-2xl text-white/90 mb-8 font-normal">
-              24/7 Mobile Windshield Repair for Commercial Fleets
+              Flexible Mobile Windshield Repair for Commercial Fleets
             </h2>
             <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-3xl mx-auto">
               Whether you're running Amazon delivery vans, U-Haul trucks, Penske rentals, FedEx or UPS routes, 
@@ -109,7 +109,7 @@ const FleetServices = () => {
                 Comprehensive Fleet Glass Solutions
               </h2>
               <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                At Omaha Auto Glass Repair LLC, we provide 24/7 mobile fleet windshield repair services 
+                At Omaha Auto Glass Repair LLC, we provide flexible mobile fleet windshield repair services 
                 across Omaha and surrounding areas. We'll visit your yard, depot, or parking site on a 
                 weekly, bi-weekly, or monthly basis — inspect and fix all rock chips before they spread — 
                 and invoice you in one streamlined batch.
@@ -138,28 +138,10 @@ const FleetServices = () => {
               <h3 className="text-2xl font-bold text-foreground mb-8 text-center">
                 Why Fleet Managers Choose Our Mobile Glass Service
               </h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {benefits.slice(0, 3).map((benefit, index) => (
-                  <Card key={index} className="border hover:border-primary/50 transition-colors">
-                    <CardHeader className="text-center pb-4">
-                      <div className="w-12 h-12 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                        <benefit.icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <CardTitle className="text-lg">{benefit.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-center">
-                        {benefit.description}
-                      </CardDescription>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-              {/* Center the remaining cards */}
-              <div className="flex justify-center mt-6">
+              <div className="flex justify-center">
                 <div className="grid md:grid-cols-2 gap-6 max-w-2xl">
-                  {benefits.slice(3).map((benefit, index) => (
-                    <Card key={index + 3} className="border hover:border-primary/50 transition-colors">
+                  {benefits.map((benefit, index) => (
+                    <Card key={index} className="border hover:border-primary/50 transition-colors">
                       <CardHeader className="text-center pb-4">
                         <div className="w-12 h-12 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
                           <benefit.icon className="h-6 w-6 text-primary" />
