@@ -242,6 +242,7 @@ The application is designed for easy deployment to platforms like Replit, Vercel
 - ✓ Updated damage size threshold from 8 inches to 10 inches for both options
 - ✓ Reverted collapsible functionality - Steps 1 and 2 remain open for better user experience
 - ✓ Enhanced form validation with real-time error display and secure input handling
+- ✓ Increased windshield image zoom to 300% (scale-[3]) for maximum customer visibility
 
 ### Security & Code Optimization (January 2025)
 - ✓ Created comprehensive security utilities module with input validation and sanitization

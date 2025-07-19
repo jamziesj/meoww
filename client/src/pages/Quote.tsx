@@ -145,7 +145,7 @@ Submitted on: ${new Date().toLocaleString()}
                               <img 
                                 src="/newrwin.png" 
                                 alt="Windshield with large damage" 
-                                className="w-full h-full object-cover scale-200"
+                                className="w-full h-full object-cover scale-[3]"
                                 loading="lazy"
                               />
                             </div>
@@ -172,7 +172,7 @@ Submitted on: ${new Date().toLocaleString()}
                               <img 
                                 src="/newgwin.png" 
                                 alt="Windshield with small chips and cracks" 
-                                className="w-full h-full object-cover scale-200"
+                                className="w-full h-full object-cover scale-[3]"
                                 loading="lazy"
                               />
                             </div>
