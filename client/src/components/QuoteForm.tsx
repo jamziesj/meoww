@@ -23,14 +23,20 @@ const QuoteForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Create email content
+    // Basic validation
+    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim()) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+    
+    // Create email content with sanitized inputs
     const emailContent = `
 New Quote Request from Omaha Auto Glass Repair Website
 
 Customer Information:
-Name: ${formData.name}
-Phone: ${formData.phone}
-Email: ${formData.email}
+Name: ${formData.name.trim()}
+Phone: ${formData.phone.trim()}
+Email: ${formData.email.trim()}
 How they found us: ${formData.foundUs}
 
 Service Details:
@@ -39,12 +45,12 @@ Long crack repair needed: ${formData.longCrack}
 Previously attempted repair: ${formData.attemptedRepair}
 
 Additional Notes:
-${formData.notes}
+${formData.notes.trim()}
 
 Submitted on: ${new Date().toLocaleString()}
     `;
 
-    // Create mailto link
+    // Create secure mailto link
     const subject = encodeURIComponent('New Quote Request - Omaha Auto Glass Repair');
     const body = encodeURIComponent(emailContent);
     const mailtoLink = `mailto:quotes@autoglassomaha.com?subject=${subject}&body=${body}`;

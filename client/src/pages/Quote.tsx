@@ -7,8 +7,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { useState } from 'react';
-import { CheckCircle, AlertCircle, Phone, Mail } from 'lucide-react';
+import { CheckCircle, AlertCircle, Phone, Mail, ChevronDown } from 'lucide-react';
+import { sanitizeInput, validateEmail, validatePhone, validateName, createSecureMailtoLink } from '../../../shared/security';
 
 const Quote = () => {
   const [selectedOption, setSelectedOption] = useState<string>('');
@@ -19,37 +21,65 @@ const Quote = () => {
     email: '',
     description: ''
   });
+  const [isStep1Collapsed, setIsStep1Collapsed] = useState(false);
+  const [isStep2Collapsed, setIsStep2Collapsed] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const validateForm = (): boolean => {
+    const newErrors: Record<string, string> = {};
+    
+    if (!validateName(customerInfo.name)) {
+      newErrors.name = 'Please enter a valid name (2-100 characters, letters only)';
+    }
+    
+    if (!validatePhone(customerInfo.phone)) {
+      newErrors.phone = 'Please enter a valid phone number';
+    }
+    
+    if (!validateEmail(customerInfo.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    if (!validateForm()) {
+      return;
+    }
+    
     let damageType = '';
     if (selectedOption === 'large') {
-      damageType = 'Large damage (larger than 6 inches)';
+      damageType = 'Large damage (larger than 8 inches)';
     } else if (selectedOption === 'small') {
-      damageType = `Small damage (${chipCount} chip${chipCount !== '1' ? 's' : ''} or crack${chipCount !== '1' ? 's' : ''} smaller than 6 inches)`;
+      damageType = `Small damage (${chipCount} chip${chipCount !== '1' ? 's' : ''} or crack${chipCount !== '1' ? 's' : ''} smaller than 8 inches)`;
     }
 
     const emailContent = `
 New Quote Request - Omaha Auto Glass Repair
 
 Customer Information:
-Name: ${customerInfo.name}
-Phone: ${customerInfo.phone}
-Email: ${customerInfo.email}
+Name: ${sanitizeInput(customerInfo.name)}
+Phone: ${sanitizeInput(customerInfo.phone)}
+Email: ${sanitizeInput(customerInfo.email)}
 
 Damage Details:
 ${damageType}
 
 Additional Information:
-${customerInfo.description}
+${sanitizeInput(customerInfo.description)}
 
 Submitted on: ${new Date().toLocaleString()}
     `;
 
-    const subject = encodeURIComponent('New Quote Request - Omaha Auto Glass Repair');
-    const body = encodeURIComponent(emailContent);
-    const mailtoLink = `mailto:info@autoglassomaha.com?subject=${subject}&body=${body}`;
+    const mailtoLink = createSecureMailtoLink(
+      'info@autoglassomaha.com',
+      'New Quote Request - Omaha Auto Glass Repair',
+      emailContent
+    );
     
     window.location.href = mailtoLink;
     
@@ -92,15 +122,34 @@ Submitted on: ${new Date().toLocaleString()}
           <div className="max-w-4xl mx-auto">
             
             {/* Damage Selection */}
-            <Card className="mb-8 shadow-xl">
-              <CardHeader>
-                <CardTitle className="text-2xl">Step 1: Select Your Damage Type</CardTitle>
-                <CardDescription>
-                  Choose the option that best describes your windshield damage
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <RadioGroup value={selectedOption} onValueChange={setSelectedOption}>
+            <Collapsible open={!isStep1Collapsed} onOpenChange={setIsStep1Collapsed}>
+              <Card className="mb-8 shadow-xl">
+                <CollapsibleTrigger asChild>
+                  <CardHeader className="cursor-pointer hover:bg-muted/50 transition-colors">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <CardTitle className="text-2xl">Step 1: Select Your Damage Type</CardTitle>
+                        <CardDescription>
+                          Choose the option that best describes your windshield damage
+                        </CardDescription>
+                      </div>
+                      <ChevronDown className={`h-6 w-6 transition-transform ${isStep1Collapsed ? 'rotate-180' : ''}`} />
+                    </div>
+                    {selectedOption && isStep1Collapsed && (
+                      <Badge variant="outline" className="w-fit mt-2">
+                        {selectedOption === 'large' ? 'Large Damage Selected' : 'Small Damage Selected'}
+                      </Badge>
+                    )}
+                  </CardHeader>
+                </CollapsibleTrigger>
+                <CollapsibleContent>
+                  <CardContent>
+                <RadioGroup value={selectedOption} onValueChange={(value) => {
+                  setSelectedOption(value);
+                  if (value) {
+                    setIsStep1Collapsed(true);
+                  }
+                }}>
                   <div className="grid md:grid-cols-2 gap-6">
                     
                     {/* Large Damage Option */}
@@ -121,9 +170,9 @@ Submitted on: ${new Date().toLocaleString()}
                                 loading="lazy"
                               />
                             </div>
-                            <h3 className="font-semibold mb-2">My damage is larger than 6 inches</h3>
+                            <h3 className="font-semibold mb-2">My damage is larger than 8 inches</h3>
                             <p className="text-sm text-muted-foreground">
-                              Large cracks, extensive damage, or chips larger than 6 inches typically require windshield replacement.
+                              Large cracks, extensive damage, or chips larger than 8 inches typically require windshield replacement.
                             </p>
                           </CardContent>
                         </Card>
@@ -148,7 +197,7 @@ Submitted on: ${new Date().toLocaleString()}
                                 loading="lazy"
                               />
                             </div>
-                            <h3 className="font-semibold mb-2">I have three or fewer chips/cracks smaller than 6 inches</h3>
+                            <h3 className="font-semibold mb-2">I have three or fewer chips/cracks smaller than 8 inches</h3>
                             <p className="text-sm text-muted-foreground">
                               Small chips and cracks can usually be repaired quickly and cost-effectively.
                             </p>
@@ -157,21 +206,42 @@ Submitted on: ${new Date().toLocaleString()}
                       </Label>
                     </div>
                   </div>
-                </RadioGroup>
-              </CardContent>
-            </Card>
+                  </RadioGroup>
+                  </CardContent>
+                </CollapsibleContent>
+              </Card>
+            </Collapsible>
 
             {/* Chip Count Selection (only show if small damage selected) */}
             {selectedOption === 'small' && (
-              <Card className="mb-8 shadow-xl">
-                <CardHeader>
-                  <CardTitle className="text-2xl">Step 2: How Many Chips or Cracks?</CardTitle>
-                  <CardDescription>
-                    Select the number of chips or cracks you have
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <RadioGroup value={chipCount} onValueChange={setChipCount}>
+              <Collapsible open={!isStep2Collapsed} onOpenChange={setIsStep2Collapsed}>
+                <Card className="mb-8 shadow-xl">
+                  <CollapsibleTrigger asChild>
+                    <CardHeader className="cursor-pointer hover:bg-muted/50 transition-colors">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <CardTitle className="text-2xl">Step 2: How Many Chips or Cracks?</CardTitle>
+                          <CardDescription>
+                            Select the number of chips or cracks you have
+                          </CardDescription>
+                        </div>
+                        <ChevronDown className={`h-6 w-6 transition-transform ${isStep2Collapsed ? 'rotate-180' : ''}`} />
+                      </div>
+                      {chipCount && isStep2Collapsed && (
+                        <Badge variant="outline" className="w-fit mt-2">
+                          {chipCount} chip{chipCount !== '1' ? 's' : ''}/crack{chipCount !== '1' ? 's' : ''} selected
+                        </Badge>
+                      )}
+                    </CardHeader>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent>
+                    <CardContent>
+                  <RadioGroup value={chipCount} onValueChange={(value) => {
+                    setChipCount(value);
+                    if (value) {
+                      setIsStep2Collapsed(true);
+                    }
+                  }}>
                     <div className="grid grid-cols-3 gap-4">
                       <Label htmlFor="one" className="cursor-pointer">
                         <Card className={`p-6 text-center transition-all ${chipCount === '1' ? 'ring-2 ring-primary border-primary bg-primary/5' : 'border-muted hover:border-primary/50'}`}>
@@ -195,9 +265,11 @@ Submitted on: ${new Date().toLocaleString()}
                         </Card>
                       </Label>
                     </div>
-                  </RadioGroup>
-                </CardContent>
-              </Card>
+                    </RadioGroup>
+                    </CardContent>
+                  </CollapsibleContent>
+                </Card>
+              </Collapsible>
             )}
 
             {/* Coming Soon Message for Large Damage */}
@@ -251,9 +323,10 @@ Submitted on: ${new Date().toLocaleString()}
                         value={customerInfo.name}
                         onChange={(e) => setCustomerInfo({...customerInfo, name: e.target.value})}
                         required
-                        className="mt-1"
+                        className={`mt-1 ${errors.name ? 'border-red-500' : ''}`}
                         placeholder="Your full name"
                       />
+                      {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                     </div>
                     
                     <div>
@@ -266,9 +339,10 @@ Submitted on: ${new Date().toLocaleString()}
                         value={customerInfo.phone}
                         onChange={(e) => setCustomerInfo({...customerInfo, phone: e.target.value})}
                         required
-                        className="mt-1"
+                        className={`mt-1 ${errors.phone ? 'border-red-500' : ''}`}
                         placeholder="(402) 555-0123"
                       />
+                      {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                     </div>
                   </div>
                   
@@ -282,9 +356,10 @@ Submitted on: ${new Date().toLocaleString()}
                       value={customerInfo.email}
                       onChange={(e) => setCustomerInfo({...customerInfo, email: e.target.value})}
                       required
-                      className="mt-1"
+                      className={`mt-1 ${errors.email ? 'border-red-500' : ''}`}
                       placeholder="your@email.com"
                     />
+                    {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                   </div>
                   
                   <div>

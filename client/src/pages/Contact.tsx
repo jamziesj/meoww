@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Phone, Mail, MapPin, Clock, MessageSquare } from 'lucide-react';
 import { useState } from 'react';
+import { sanitizeInput, validateEmail, validatePhone, validateName, createSecureMailtoLink } from '../../../shared/security';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,23 +20,31 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Basic validation
+    if (!validateName(formData.name) || !validateEmail(formData.email) || !validatePhone(formData.phone)) {
+      alert('Please fill in all fields with valid information.');
+      return;
+    }
+    
     const emailContent = `
 New Contact Message from Omaha Auto Glass Repair Website
 
 Customer Information:
-Name: ${formData.name}
-Phone: ${formData.phone}
-Email: ${formData.email}
+Name: ${sanitizeInput(formData.name)}
+Phone: ${sanitizeInput(formData.phone)}
+Email: ${sanitizeInput(formData.email)}
 
 Message:
-${formData.message}
+${sanitizeInput(formData.message)}
 
 Submitted on: ${new Date().toLocaleString()}
     `;
 
-    const subject = encodeURIComponent('New Contact Message - Omaha Auto Glass Repair');
-    const body = encodeURIComponent(emailContent);
-    const mailtoLink = `mailto:info@autoglassomaha.com?subject=${subject}&body=${body}`;
+    const mailtoLink = createSecureMailtoLink(
+      'info@autoglassomaha.com',
+      'New Contact Message - Omaha Auto Glass Repair',
+      emailContent
+    );
     
     window.location.href = mailtoLink;
     

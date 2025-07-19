@@ -9,20 +9,24 @@ app.use(express.urlencoded({ extended: false }));
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
-  let capturedJsonResponse: Record<string, any> | undefined = undefined;
+  // Only capture response status for logging, not sensitive data
+  let capturedStatusCode: number | undefined = undefined;
 
   const originalResJson = res.json;
   res.json = function (bodyJson, ...args) {
-    capturedJsonResponse = bodyJson;
+    capturedStatusCode = res.statusCode;
     return originalResJson.apply(res, [bodyJson, ...args]);
   };
 
   res.on("finish", () => {
     const duration = Date.now() - start;
     if (path.startsWith("/api")) {
-      let logLine = `${req.method} ${path} ${res.statusCode} in ${duration}ms`;
-      if (capturedJsonResponse) {
-        logLine += ` :: ${JSON.stringify(capturedJsonResponse)}`;
+      // Security-conscious logging - avoid logging sensitive response data
+      let logLine = `${req.method} ${path} ${capturedStatusCode || res.statusCode} in ${duration}ms`;
+      
+      // Only log errors for debugging, not successful responses with potentially sensitive data
+      if (res.statusCode >= 400) {
+        logLine += ` :: Error ${res.statusCode}`;
       }
 
       if (logLine.length > 80) {
