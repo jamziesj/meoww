@@ -7,9 +7,9 @@ import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+
 import { useState } from 'react';
-import { CheckCircle, AlertCircle, Phone, Mail, ChevronDown } from 'lucide-react';
+import { CheckCircle, AlertCircle, Phone, Mail } from 'lucide-react';
 import { sanitizeInput, validateEmail, validatePhone, validateName, createSecureMailtoLink } from '../../../shared/security';
 
 const Quote = () => {
@@ -21,8 +21,6 @@ const Quote = () => {
     email: '',
     description: ''
   });
-  const [isStep1Collapsed, setIsStep1Collapsed] = useState(false);
-  const [isStep2Collapsed, setIsStep2Collapsed] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const validateForm = (): boolean => {
@@ -53,9 +51,9 @@ const Quote = () => {
     
     let damageType = '';
     if (selectedOption === 'large') {
-      damageType = 'Large damage (larger than 8 inches)';
+      damageType = 'Large damage (larger than 10 inches)';
     } else if (selectedOption === 'small') {
-      damageType = `Small damage (${chipCount} chip${chipCount !== '1' ? 's' : ''} or crack${chipCount !== '1' ? 's' : ''} smaller than 8 inches)`;
+      damageType = `Small damage (${chipCount} chip${chipCount !== '1' ? 's' : ''} or crack${chipCount !== '1' ? 's' : ''} smaller than 10 inches)`;
     }
 
     const emailContent = `
@@ -122,34 +120,15 @@ Submitted on: ${new Date().toLocaleString()}
           <div className="max-w-4xl mx-auto">
             
             {/* Damage Selection */}
-            <Collapsible open={!isStep1Collapsed} onOpenChange={setIsStep1Collapsed}>
-              <Card className="mb-8 shadow-xl">
-                <CollapsibleTrigger asChild>
-                  <CardHeader className="cursor-pointer hover:bg-muted/50 transition-colors">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <CardTitle className="text-2xl">Step 1: Select Your Damage Type</CardTitle>
-                        <CardDescription>
-                          Choose the option that best describes your windshield damage
-                        </CardDescription>
-                      </div>
-                      <ChevronDown className={`h-6 w-6 transition-transform ${isStep1Collapsed ? 'rotate-180' : ''}`} />
-                    </div>
-                    {selectedOption && isStep1Collapsed && (
-                      <Badge variant="outline" className="w-fit mt-2">
-                        {selectedOption === 'large' ? 'Large Damage Selected' : 'Small Damage Selected'}
-                      </Badge>
-                    )}
-                  </CardHeader>
-                </CollapsibleTrigger>
-                <CollapsibleContent>
-                  <CardContent>
-                <RadioGroup value={selectedOption} onValueChange={(value) => {
-                  setSelectedOption(value);
-                  if (value) {
-                    setIsStep1Collapsed(true);
-                  }
-                }}>
+            <Card className="mb-8 shadow-xl">
+              <CardHeader>
+                <CardTitle className="text-2xl">Step 1: Select Your Damage Type</CardTitle>
+                <CardDescription>
+                  Choose the option that best describes your windshield damage
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <RadioGroup value={selectedOption} onValueChange={setSelectedOption}>
                   <div className="grid md:grid-cols-2 gap-6">
                     
                     {/* Large Damage Option */}
@@ -170,9 +149,9 @@ Submitted on: ${new Date().toLocaleString()}
                                 loading="lazy"
                               />
                             </div>
-                            <h3 className="font-semibold mb-2">My damage is larger than 8 inches</h3>
+                            <h3 className="font-semibold mb-2">My damage is larger than 10 inches</h3>
                             <p className="text-sm text-muted-foreground">
-                              Large cracks, extensive damage, or chips larger than 8 inches typically require windshield replacement.
+                              Large cracks, extensive damage, or chips larger than 10 inches typically require windshield replacement.
                             </p>
                           </CardContent>
                         </Card>
@@ -197,7 +176,7 @@ Submitted on: ${new Date().toLocaleString()}
                                 loading="lazy"
                               />
                             </div>
-                            <h3 className="font-semibold mb-2">I have three or fewer chips/cracks smaller than 8 inches</h3>
+                            <h3 className="font-semibold mb-2">I have three or fewer chips/cracks smaller than 10 inches</h3>
                             <p className="text-sm text-muted-foreground">
                               Small chips and cracks can usually be repaired quickly and cost-effectively.
                             </p>
@@ -206,42 +185,21 @@ Submitted on: ${new Date().toLocaleString()}
                       </Label>
                     </div>
                   </div>
-                  </RadioGroup>
-                  </CardContent>
-                </CollapsibleContent>
-              </Card>
-            </Collapsible>
+                </RadioGroup>
+              </CardContent>
+            </Card>
 
             {/* Chip Count Selection (only show if small damage selected) */}
             {selectedOption === 'small' && (
-              <Collapsible open={!isStep2Collapsed} onOpenChange={setIsStep2Collapsed}>
-                <Card className="mb-8 shadow-xl">
-                  <CollapsibleTrigger asChild>
-                    <CardHeader className="cursor-pointer hover:bg-muted/50 transition-colors">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <CardTitle className="text-2xl">Step 2: How Many Chips or Cracks?</CardTitle>
-                          <CardDescription>
-                            Select the number of chips or cracks you have
-                          </CardDescription>
-                        </div>
-                        <ChevronDown className={`h-6 w-6 transition-transform ${isStep2Collapsed ? 'rotate-180' : ''}`} />
-                      </div>
-                      {chipCount && isStep2Collapsed && (
-                        <Badge variant="outline" className="w-fit mt-2">
-                          {chipCount} chip{chipCount !== '1' ? 's' : ''}/crack{chipCount !== '1' ? 's' : ''} selected
-                        </Badge>
-                      )}
-                    </CardHeader>
-                  </CollapsibleTrigger>
-                  <CollapsibleContent>
-                    <CardContent>
-                  <RadioGroup value={chipCount} onValueChange={(value) => {
-                    setChipCount(value);
-                    if (value) {
-                      setIsStep2Collapsed(true);
-                    }
-                  }}>
+              <Card className="mb-8 shadow-xl">
+                <CardHeader>
+                  <CardTitle className="text-2xl">Step 2: How Many Chips or Cracks?</CardTitle>
+                  <CardDescription>
+                    Select the number of chips or cracks you have
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <RadioGroup value={chipCount} onValueChange={setChipCount}>
                     <div className="grid grid-cols-3 gap-4">
                       <Label htmlFor="one" className="cursor-pointer">
                         <Card className={`p-6 text-center transition-all ${chipCount === '1' ? 'ring-2 ring-primary border-primary bg-primary/5' : 'border-muted hover:border-primary/50'}`}>
@@ -265,11 +223,9 @@ Submitted on: ${new Date().toLocaleString()}
                         </Card>
                       </Label>
                     </div>
-                    </RadioGroup>
-                    </CardContent>
-                  </CollapsibleContent>
-                </Card>
-              </Collapsible>
+                  </RadioGroup>
+                </CardContent>
+              </Card>
             )}
 
             {/* Coming Soon Message for Large Damage */}
