@@ -61,7 +61,7 @@ const Hero = () => {
                   <Star key={i} className="h-5 w-5 fill-primary text-primary" />
                 ))}
               </div>
-              <span className="text-sm">Trusted by 500+ Omaha Drivers</span>
+              <span className="text-sm">Trusted by Omaha Drivers</span>
             </div>
           </div>
 
@@ -87,7 +87,7 @@ const Hero = () => {
                 <div className="space-y-3">
                   <div className="flex items-center justify-center space-x-3 text-white">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span>$0 Insurance Deductible</span>
+                    <span>No Glass Warping</span>
                   </div>
                   <div className="flex items-center justify-center space-x-3 text-white">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>

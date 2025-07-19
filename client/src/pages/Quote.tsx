@@ -107,17 +107,17 @@ Submitted on: ${new Date().toLocaleString()}
                     <div className="relative">
                       <Label htmlFor="large" className="cursor-pointer">
                         <div className="flex items-center space-x-2 mb-4">
-                          <RadioGroupItem value="large" id="large" />
+                          <RadioGroupItem value="large" id="large" className={selectedOption === 'large' ? 'border-red-500 text-red-500' : ''} />
                           <span className="text-lg font-semibold">Large Damage</span>
                           <Badge variant="destructive" className="ml-2">Replacement Needed</Badge>
                         </div>
-                        <Card className={`cursor-pointer transition-all ${selectedOption === 'large' ? 'ring-2 ring-primary border-primary' : 'border-muted'}`}>
+                        <Card className={`cursor-pointer transition-all ${selectedOption === 'large' ? 'ring-2 ring-red-500 border-red-500' : 'border-muted'}`}>
                           <CardContent className="p-6">
                             <div className="relative h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                               <img 
                                 src="/newrwin.png" 
                                 alt="Windshield with large damage" 
-                                className="w-full h-full object-cover scale-150"
+                                className="w-full h-full object-cover scale-200"
                                 loading="lazy"
                               />
                             </div>
@@ -144,7 +144,7 @@ Submitted on: ${new Date().toLocaleString()}
                               <img 
                                 src="/newgwin.png" 
                                 alt="Windshield with small chips and cracks" 
-                                className="w-full h-full object-cover scale-150"
+                                className="w-full h-full object-cover scale-200"
                                 loading="lazy"
                               />
                             </div>

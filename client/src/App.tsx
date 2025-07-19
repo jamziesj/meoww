@@ -43,8 +43,6 @@ const App = () => (
         <Route path="/quote" component={Quote} />
         <Route path="/privacy-policy" component={PrivacyPolicy} />
         <Route path="/terms-of-service" component={TermsOfService} />
-        {/* Catch-all route */}
-        <Route component={NotFound} />
       </Router>
     </TooltipProvider>
   </QueryClientProvider>

@@ -202,7 +202,7 @@ const Services = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-primary-foreground text-primary-foreground hover:text-primary hover:bg-primary-foreground px-8 py-4 text-lg font-semibold relative overflow-hidden group"
+              className="border-primary-foreground text-black hover:text-white hover:bg-primary-foreground px-8 py-4 text-lg font-semibold relative overflow-hidden group"
               asChild
             >
               <a href="tel:402-302-2284" className="flex items-center space-x-2">
