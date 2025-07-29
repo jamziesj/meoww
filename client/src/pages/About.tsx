@@ -5,7 +5,7 @@ import { Phone, Mail } from 'lucide-react';
 
 const About = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen scroll-container">
       <Header />
       
       {/* Hero Section */}

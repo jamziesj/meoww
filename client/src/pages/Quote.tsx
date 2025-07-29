@@ -42,12 +42,18 @@ const Quote = () => {
     return Object.keys(newErrors).length === 0;
   };
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!validateForm()) {
       return;
     }
+    
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
     
     let damageType = '';
     if (selectedOption === 'large') {
@@ -56,36 +62,40 @@ const Quote = () => {
       damageType = `Small damage (${chipCount} chip${chipCount !== '1' ? 's' : ''} or crack${chipCount !== '1' ? 's' : ''} smaller than 10 inches)`;
     }
 
-    const emailContent = `
-New Quote Request - Omaha Auto Glass Repair
+    try {
+      const response = await fetch('/api/send-quote', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: sanitizeInput(customerInfo.name),
+          email: sanitizeInput(customerInfo.email),
+          phone: sanitizeInput(customerInfo.phone),
+          damageType,
+          chipCount: chipCount || undefined,
+          description: sanitizeInput(customerInfo.description) || undefined,
+        }),
+      });
 
-Customer Information:
-Name: ${sanitizeInput(customerInfo.name)}
-Phone: ${sanitizeInput(customerInfo.phone)}
-Email: ${sanitizeInput(customerInfo.email)}
+      const result = await response.json();
 
-Damage Details:
-${damageType}
-
-Additional Information:
-${sanitizeInput(customerInfo.description)}
-
-Submitted on: ${new Date().toLocaleString()}
-    `;
-
-    const mailtoLink = createSecureMailtoLink(
-      'info@autoglassomaha.com',
-      'New Quote Request - Omaha Auto Glass Repair',
-      emailContent
-    );
-    
-    window.location.href = mailtoLink;
-    
-    // Reset form
-    setSelectedOption('');
-    setChipCount('');
-    setCustomerInfo({ name: '', phone: '', email: '', description: '' });
-    alert('Thank you! Your quote request has been prepared. Please send the email that just opened in your email client.');
+      if (result.success) {
+        setSubmitStatus('success');
+        // Reset form
+        setSelectedOption('');
+        setChipCount('');
+        setCustomerInfo({ name: '', phone: '', email: '', description: '' });
+        setErrors({});
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Failed to submit quote:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const canSubmit = selectedOption === 'small' && chipCount && 
@@ -94,7 +104,7 @@ Submitted on: ${new Date().toLocaleString()}
     customerInfo.email;
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen scroll-container">
       <Header />
       
       {/* Hero Section */}
@@ -334,11 +344,50 @@ Submitted on: ${new Date().toLocaleString()}
                   <Button 
                     type="submit" 
                     onClick={handleSubmit}
-                    disabled={!canSubmit}
+                    disabled={!canSubmit || isSubmitting}
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 text-lg font-semibold"
                   >
-                    Submit Quote Request
+                    {isSubmitting ? (
+                      <>
+                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                        Sending Quote Request...
+                      </>
+                    ) : (
+                      <>
+                        <Mail className="mr-2 h-5 w-5" />
+                        Submit Quote Request
+                      </>
+                    )}
                   </Button>
+
+                  {/* Success/Error Messages */}
+                  {submitStatus === 'success' && (
+                    <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+                      <div className="flex items-center">
+                        <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
+                        <div>
+                          <h3 className="text-green-800 font-semibold">Quote Request Sent Successfully!</h3>
+                          <p className="text-green-700 text-sm mt-1">
+                            We've received your quote request and will contact you within 24 hours. Thank you for choosing Omaha Auto Glass Repair!
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {submitStatus === 'error' && (
+                    <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                      <div className="flex items-center">
+                        <AlertCircle className="h-5 w-5 text-red-600 mr-2" />
+                        <div>
+                          <h3 className="text-red-800 font-semibold">Failed to Send Quote Request</h3>
+                          <p className="text-red-700 text-sm mt-1">
+                            We're having trouble processing your request. Please try again or call us directly at <a href="tel:4023022284" className="font-semibold text-red-800 underline">(402) 302-2284</a>.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             )}
