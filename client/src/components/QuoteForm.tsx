@@ -53,7 +53,7 @@ Submitted on: ${new Date().toLocaleString()}
     // Create secure mailto link
     const subject = encodeURIComponent('New Quote Request - Omaha Auto Glass Repair');
     const body = encodeURIComponent(emailContent);
-    const mailtoLink = `mailto:quotes@autoglassomaha.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:info@zip.glass?subject=${subject}&body=${body}`;
     
     // Open email client
     window.location.href = mailtoLink;
@@ -122,10 +122,10 @@ Submitted on: ${new Date().toLocaleString()}
                   <div>
                     <h3 className="font-semibold text-foreground">Email Us</h3>
                     <a 
-                      href="mailto:quotes@autoglassomaha.com" 
+                      href="mailto:info@zip.glass" 
                       className="text-primary font-semibold hover:underline"
                     >
-                      quotes@autoglassomaha.com
+                      info@zip.glass
                     </a>
                   </div>
                 </div>

@@ -81,7 +81,7 @@ const About = () => {
                     className="px-8 py-4"
                     asChild
                   >
-                    <a href="mailto:info@autoglassomaha.com" className="flex items-center space-x-2">
+                    <a href="mailto:info@zip.glass" className="flex items-center space-x-2">
                       <Mail className="h-5 w-5" />
                       <span>Send Us a Message</span>
                     </a>

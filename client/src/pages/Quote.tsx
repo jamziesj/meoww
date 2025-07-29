@@ -417,7 +417,7 @@ const Quote = () => {
                       className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-3"
                       asChild
                     >
-                      <a href="mailto:info@autoglassomaha.com" className="flex items-center space-x-2">
+                      <a href="mailto:info@zip.glass" className="flex items-center space-x-2">
                         <Mail className="h-4 w-4" />
                         <span>Email Us</span>
                       </a>

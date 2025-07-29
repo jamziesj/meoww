@@ -41,7 +41,7 @@ Submitted on: ${new Date().toLocaleString()}
     `;
 
     const mailtoLink = createSecureMailtoLink(
-      'info@autoglassomaha.com',
+      'info@zip.glass',
       'New Contact Message - Omaha Auto Glass Repair',
       emailContent
     );
@@ -200,10 +200,10 @@ Submitted on: ${new Date().toLocaleString()}
                       <div>
                         <h3 className="font-semibold text-foreground">Email</h3>
                         <a 
-                          href="mailto:info@autoglassomaha.com" 
+                          href="mailto:info@zip.glass" 
                           className="text-primary font-semibold hover:underline"
                         >
-                          info@autoglassomaha.com
+                          info@zip.glass
                         </a>
                       </div>
                     </div>

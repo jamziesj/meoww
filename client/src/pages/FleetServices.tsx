@@ -217,7 +217,7 @@ const FleetServices = () => {
                   className="border-primary-foreground text-black hover:text-white hover:bg-primary-foreground px-8 py-4 relative overflow-hidden group"
                   asChild
                 >
-                  <a href="mailto:info@autoglassomaha.com" className="flex items-center space-x-2">
+                  <a href="mailto:info@zip.glass" className="flex items-center space-x-2">
                     <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary-light to-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
                     <Mail className="h-5 w-5 relative z-10" />
                     <span className="relative z-10">Email Us</span>

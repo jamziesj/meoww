@@ -76,7 +76,7 @@ const PrivacyPolicy = () => {
               <div className="text-muted-foreground">
                 <p>Omaha Auto Glass Repair LLC</p>
                 <p>Phone: (402) 302-2284</p>
-                <p>Email: info@autoglassomaha.com</p>
+                <p>Email: info@zip.glass</p>
               </div>
 
               <h2 className="text-2xl font-bold text-foreground mb-6">Policy Updates</h2>

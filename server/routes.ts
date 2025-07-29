@@ -78,7 +78,7 @@ Submitted on: ${new Date().toLocaleString()}
       `;
 
       // Temporary fallback while SES domain verification is pending
-      // For production, you'll need to verify info@autoglassomaha.com in AWS SES
+      // For production, you'll need to verify info@zip.glass in AWS SES
       console.log('Quote request received:', {
         name: validatedData.name,
         email: validatedData.email,
@@ -94,8 +94,7 @@ Submitted on: ${new Date().toLocaleString()}
       } else {
         res.status(500).json({ 
           success: false, 
-          message: 'Failed to send quote request. Please try again or call us directly.',
-          error: emailResult.error 
+          message: 'Failed to send quote request. Please try again or call us directly.'
         });
       }
     } catch (error) {
