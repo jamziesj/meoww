@@ -77,11 +77,11 @@ const Hero = () => {
           <div className="relative">
             <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-2xl">
               <div className="text-center">
-                <div className="w-32 h-32 mx-auto mb-6 bg-white rounded-full flex items-center justify-center border-2 border-white/30 shadow-lg">
+                <div className="w-40 h-40 mx-auto mb-6 bg-white rounded-full flex items-center justify-center border-2 border-white/30 shadow-lg">
                   <img 
                     src={zIcon} 
                     alt="Zip Glass" 
-                    className="h-16 w-auto px-2"
+                    className="h-32 w-auto px-2"
                     loading="lazy"
                   />
                 </div>

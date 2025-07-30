@@ -33,7 +33,7 @@ const About = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              About Omaha Auto Glass Repair
+              About Zip Glass
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Your trusted local auto glass experts, committed to providing exceptional 
@@ -52,7 +52,7 @@ const About = () => {
                   Professional Auto Glass Services You Can Trust
                 </h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  At Omaha Auto Glass Repair, we understand that your vehicle's glass is crucial 
+                  At Zip Glass, we understand that your vehicle's glass is crucial 
                   for your safety and visibility. That's why we're committed to providing fast, 
                   reliable, and professional auto glass services that exceed your expectations.
                 </p>

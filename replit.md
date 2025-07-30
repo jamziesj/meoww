@@ -288,3 +288,8 @@ The application is designed for easy deployment to platforms like Replit, Vercel
 - ✓ **Hero Logo Update**: Changed hero logo to new Z icon (zicon.png) instead of wide logo
 - ✓ **Hero Bullets Fix**: Made all hero page bullets red instead of alternating red/black
 - ✓ **Header Text Color**: Changed header text from light gray to charcoal (slate-800) for better readability
+- ✓ **Header Logo Update**: Replaced header logo with new "zipglasschonk" wide logo
+- ✓ **Hero Logo Zoom**: Increased hero page logo size by 100% (h-32 instead of h-16)
+- ✓ **About Page Logo**: Updated About page to use Z icon with 100% larger size and container
+- ✓ **Brand Consistency**: Changed all remaining "Omaha Auto Glass Repair" references to "Zip Glass"
+- ✓ **Quote Page Green Theme**: Updated small damage options to use green checkmark theme instead of red/primary colors

@@ -74,7 +74,7 @@ const PrivacyPolicy = () => {
                 If you have questions about this Privacy Policy, please contact us at:
               </p>
               <div className="text-muted-foreground">
-                <p>Omaha Auto Glass Repair LLC</p>
+                <p>Zip Glass LLC</p>
                 <p>Phone: (402) 302-2284</p>
                 <p>Email: info@zip.glass</p>
               </div>

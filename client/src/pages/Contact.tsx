@@ -27,7 +27,7 @@ const Contact = () => {
     }
     
     const emailContent = `
-New Contact Message from Omaha Auto Glass Repair Website
+New Contact Message from Zip Glass Website
 
 Customer Information:
 Name: ${sanitizeInput(formData.name)}
@@ -42,7 +42,7 @@ Submitted on: ${new Date().toLocaleString()}
 
     const mailtoLink = createSecureMailtoLink(
       'info@zip.glass',
-      'New Contact Message - Omaha Auto Glass Repair',
+      'New Contact Message - Zip Glass',
       emailContent
     );
     

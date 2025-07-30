@@ -31,7 +31,7 @@ const QuoteForm = () => {
     
     // Create email content with sanitized inputs
     const emailContent = `
-New Quote Request from Omaha Auto Glass Repair Website
+New Quote Request from Zip Glass Website
 
 Customer Information:
 Name: ${formData.name.trim()}
@@ -51,7 +51,7 @@ Submitted on: ${new Date().toLocaleString()}
     `;
 
     // Create secure mailto link
-    const subject = encodeURIComponent('New Quote Request - Omaha Auto Glass Repair');
+    const subject = encodeURIComponent('New Quote Request - Zip Glass');
     const body = encodeURIComponent(emailContent);
     const mailtoLink = `mailto:info@zip.glass?subject=${subject}&body=${body}`;
     

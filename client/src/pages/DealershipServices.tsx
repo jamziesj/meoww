@@ -101,7 +101,7 @@ const DealershipServices = () => {
                 Reliable Mobile Windshield Repair for Dealerships
               </h2>
               <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                With Omaha Auto Glass Repair LLC, you get a reliable, scheduled mobile windshield repair 
+                With Zip Glass LLC, you get a reliable, scheduled mobile windshield repair 
                 service for dealerships. We walk your lot weekly or bi-weekly, inspect every vehicle, 
                 and professionally repair any windshield chips — right on site.
               </p>

@@ -172,11 +172,11 @@ const Quote = () => {
                     <div className="relative">
                       <Label htmlFor="small" className="cursor-pointer">
                         <div className="flex items-center space-x-2 mb-4">
-                          <RadioGroupItem value="small" id="small" />
+                          <RadioGroupItem value="small" id="small" className={selectedOption === 'small' ? 'border-green-500 text-green-500' : ''} />
                           <span className="text-lg font-semibold">Small Damage</span>
                           <Badge variant="secondary" className="ml-2 bg-green-100 text-green-800">Repairable</Badge>
                         </div>
-                        <Card className={`cursor-pointer transition-all ${selectedOption === 'small' ? 'ring-2 ring-primary border-primary' : 'border-muted'}`}>
+                        <Card className={`cursor-pointer transition-all ${selectedOption === 'small' ? 'ring-2 ring-green-500 border-green-500' : 'border-muted'}`}>
                           <CardContent className="p-6">
                             <div className="relative h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                               <img 
@@ -212,23 +212,23 @@ const Quote = () => {
                   <RadioGroup value={chipCount} onValueChange={setChipCount}>
                     <div className="grid grid-cols-3 gap-4">
                       <Label htmlFor="one" className="cursor-pointer">
-                        <Card className={`p-6 text-center transition-all ${chipCount === '1' ? 'ring-2 ring-primary border-primary bg-primary/5' : 'border-muted hover:border-primary/50'}`}>
-                          <RadioGroupItem value="1" id="one" className="mb-2" />
-                          <div className="text-2xl font-bold text-primary">1</div>
+                        <Card className={`p-6 text-center transition-all ${chipCount === '1' ? 'ring-2 ring-green-500 border-green-500 bg-green-50' : 'border-muted hover:border-green-500/50'}`}>
+                          <RadioGroupItem value="1" id="one" className={`mb-2 ${chipCount === '1' ? 'border-green-500 text-green-500' : ''}`} />
+                          <div className={`text-2xl font-bold ${chipCount === '1' ? 'text-green-600' : 'text-primary'}`}>1</div>
                           <div className="text-sm text-muted-foreground">chip/crack</div>
                         </Card>
                       </Label>
                       <Label htmlFor="two" className="cursor-pointer">
-                        <Card className={`p-6 text-center transition-all ${chipCount === '2' ? 'ring-2 ring-primary border-primary bg-primary/5' : 'border-muted hover:border-primary/50'}`}>
-                          <RadioGroupItem value="2" id="two" className="mb-2" />
-                          <div className="text-2xl font-bold text-primary">2</div>
+                        <Card className={`p-6 text-center transition-all ${chipCount === '2' ? 'ring-2 ring-green-500 border-green-500 bg-green-50' : 'border-muted hover:border-green-500/50'}`}>
+                          <RadioGroupItem value="2" id="two" className={`mb-2 ${chipCount === '2' ? 'border-green-500 text-green-500' : ''}`} />
+                          <div className={`text-2xl font-bold ${chipCount === '2' ? 'text-green-600' : 'text-primary'}`}>2</div>
                           <div className="text-sm text-muted-foreground">chips/cracks</div>
                         </Card>
                       </Label>
                       <Label htmlFor="three" className="cursor-pointer">
-                        <Card className={`p-6 text-center transition-all ${chipCount === '3' ? 'ring-2 ring-primary border-primary bg-primary/5' : 'border-muted hover:border-primary/50'}`}>
-                          <RadioGroupItem value="3" id="three" className="mb-2" />
-                          <div className="text-2xl font-bold text-primary">3</div>
+                        <Card className={`p-6 text-center transition-all ${chipCount === '3' ? 'ring-2 ring-green-500 border-green-500 bg-green-50' : 'border-muted hover:border-green-500/50'}`}>
+                          <RadioGroupItem value="3" id="three" className={`mb-2 ${chipCount === '3' ? 'border-green-500 text-green-500' : ''}`} />
+                          <div className={`text-2xl font-bold ${chipCount === '3' ? 'text-green-600' : 'text-primary'}`}>3</div>
                           <div className="text-sm text-muted-foreground">chips/cracks</div>
                         </Card>
                       </Label>
@@ -248,7 +248,7 @@ const Quote = () => {
                       Full Replacement Needed — Service Coming Soon
                     </h3>
                     <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-                      The damage to your windshield appears to be beyond what can be safely repaired. While Omaha Auto Glass Repair currently focuses on chip and crack repairs, we're excited to share that full windshield replacement service is coming soon to our lineup of mobile offerings in the Omaha area.
+                      The damage to your windshield appears to be beyond what can be safely repaired. While Zip Glass currently focuses on chip and crack repairs, we're excited to share that full windshield replacement service is coming soon to our lineup of mobile offerings in the Omaha area.
                     </p>
                     <p className="text-lg text-muted-foreground mb-6">
                       In the meantime, we're happy to refer you to a trusted local provider to handle the replacement. We truly appreciate your interest and hope to serve you soon with a full-service solution that's fast, local, and reliable. Here are two reliable local options:
@@ -368,7 +368,7 @@ const Quote = () => {
                         <div>
                           <h3 className="text-green-800 font-semibold">Quote Request Sent Successfully!</h3>
                           <p className="text-green-700 text-sm mt-1">
-                            We've received your quote request and will contact you within 24 hours. Thank you for choosing Omaha Auto Glass Repair!
+                            We've received your quote request and will contact you within 24 hours. Thank you for choosing Zip Glass!
                           </p>
                         </div>
                       </div>

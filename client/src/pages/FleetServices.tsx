@@ -110,7 +110,7 @@ const FleetServices = () => {
                 Comprehensive Fleet Glass Solutions
               </h2>
               <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                At Omaha Auto Glass Repair LLC, we provide flexible mobile fleet windshield repair services 
+                At Zip Glass LLC, we provide flexible mobile fleet windshield repair services 
                 across Omaha and surrounding areas. We'll visit your yard, depot, or parking site on a 
                 weekly, bi-weekly, or monthly basis — inspect and fix all rock chips before they spread — 
                 and invoice you in one streamlined batch.

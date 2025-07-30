@@ -3,7 +3,7 @@ import { Link, useLocation } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import zipGlassLogo from '@assets/zipglasswide_1753837262278.jpg';
+import zipGlassLogo from '@assets/zipglasschonk_1753839346458.jpg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

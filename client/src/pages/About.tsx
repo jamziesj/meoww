@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Phone, Mail } from 'lucide-react';
+import zIcon from '@assets/zicon_1753838947122.png';
 
 const About = () => {
   return (
@@ -23,7 +24,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-              About Omaha Auto Glass Repair
+              About Zip Glass
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8">
               Passion-driven service with a commitment to excellence
@@ -38,13 +39,13 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <div className="bg-muted/30 rounded-2xl p-8 md:p-12">
               <div className="text-center mb-12">
-                <div className="w-24 h-24 mx-auto mb-6 relative">
+                <div className="w-48 h-48 mx-auto mb-6 relative">
                   <div className="absolute inset-0 bg-primary/20 rounded-full"></div>
                   <div className="w-full h-full bg-white rounded-full flex items-center justify-center shadow-lg">
                     <img 
-                      src="/lovable-uploads/9ccc5ea8-9e5f-4dd2-a295-579bca72f167.png" 
-                      alt="Omaha Auto Glass Repair Logo" 
-                      className="h-16 w-auto"
+                      src={zIcon} 
+                      alt="Zip Glass Logo" 
+                      className="h-32 w-auto"
                       loading="lazy"
                     />
                   </div>
@@ -56,7 +57,7 @@ const About = () => {
 
               <div className="prose prose-lg max-w-none text-center">
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  Passion fuels everything we do at Omaha Auto Glass Repair – from the repairs we perform to the relationships we build. As a newer entrepreneur, I've learned the importance of serving people, cultivating strong customer relationships, and standing up for what's right. I genuinely love the work we do, and providing a quality service that benefits others is an absolute honor.
+                  Passion fuels everything we do at Zip Glass – from the repairs we perform to the relationships we build. As a newer entrepreneur, I've learned the importance of serving people, cultivating strong customer relationships, and standing up for what's right. I genuinely love the work we do, and providing a quality service that benefits others is an absolute honor.
                 </p>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed mb-12">
