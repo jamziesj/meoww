@@ -72,9 +72,9 @@ const FleetServices = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/lovable-uploads/ChatGPT Image Jul 17, 2025, 04_03_56 PM.png" 
-            alt="Background" 
-            className="w-full h-full object-cover"
+            src="/lovable-uploads/fleetb_1753911499786.jpg" 
+            alt="Fleet background" 
+            className="w-full h-full object-cover opacity-40 blur-[1px]"
             loading="lazy"
           />
           <div className="absolute inset-0 bg-black/60"></div>

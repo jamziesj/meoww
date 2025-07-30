@@ -252,6 +252,12 @@ The application is designed for easy deployment to platforms like Replit, Vercel
 - ✓ **Services Page Content**: Updated hero text to emphasize Nebraska weather/road conditions and replacement costs
 - ✓ **Auto-scroll Fix**: Enhanced ScrollToTop component with requestAnimationFrame and added individual useEffect hooks to problematic pages
 - ✓ **Quote Button Color**: Changed submit quote button from red (bg-primary) to green (bg-green-600) for better user experience
+- ✓ **Quote Page Glassmorphism**: Added glassmorphism overlay element to Quote page matching other service pages
+- ✓ **Service Page Backgrounds**: Updated all service page hero backgrounds with relevant images:
+  - Quote page: quoteb.jpg (windshield with sunlight)
+  - Fleet Services: fleetb.jpg (fleet of white commercial vehicles)
+  - Services/Rock Chip: chipb.jpg (technician performing windshield repair)
+  - Dealership Services: dealerb.jpg (car dealership lot aerial view)
 
 ### Performance Optimization & Stability Measures (January 2025)
 - ✓ Lazy loading: Implemented for all images across the website (loading="lazy" for non-critical images)

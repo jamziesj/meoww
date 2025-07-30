@@ -68,9 +68,9 @@ const DealershipServices = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/lovable-uploads/ChatGPT Image Jul 17, 2025, 04_03_56 PM.png" 
-            alt="Background" 
-            className="w-full h-full object-cover"
+            src="/lovable-uploads/dealerb_1753912506919.jpg" 
+            alt="Dealership background" 
+            className="w-full h-full object-cover opacity-40 blur-[1px]"
             loading="lazy"
           />
           <div className="absolute inset-0 bg-black/60"></div>
