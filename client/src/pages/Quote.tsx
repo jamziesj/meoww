@@ -213,22 +213,22 @@ const Quote = () => {
                   <RadioGroup value={chipCount} onValueChange={setChipCount}>
                     <div className="grid grid-cols-3 gap-4">
                       <Label htmlFor="one" className="cursor-pointer">
-                        <Card className={`p-6 text-center transition-all ${chipCount === '1' ? 'ring-2 ring-green-500 border-green-500 bg-green-50' : 'border-muted hover:border-green-500/50'}`}>
-                          <RadioGroupItem value="1" id="one" className={`mb-2 ${chipCount === '1' ? 'border-green-500 text-green-500' : ''}`} />
+                        <Card className={`p-6 text-center transition-all ${chipCount === '1' ? 'ring-2 ring-green-500 border-green-500 bg-green-50' : 'border-green-500 hover:border-green-600'}`}>
+                          <RadioGroupItem value="1" id="one" className={`mb-2 border-green-500 ${chipCount === '1' ? 'bg-green-500 text-white' : ''}`} />
                           <div className={`text-2xl font-bold ${chipCount === '1' ? 'text-green-600' : 'text-primary'}`}>1</div>
                           <div className="text-sm text-muted-foreground">chip/crack</div>
                         </Card>
                       </Label>
                       <Label htmlFor="two" className="cursor-pointer">
-                        <Card className={`p-6 text-center transition-all ${chipCount === '2' ? 'ring-2 ring-green-500 border-green-500 bg-green-50' : 'border-muted hover:border-green-500/50'}`}>
-                          <RadioGroupItem value="2" id="two" className={`mb-2 ${chipCount === '2' ? 'border-green-500 text-green-500' : ''}`} />
+                        <Card className={`p-6 text-center transition-all ${chipCount === '2' ? 'ring-2 ring-green-500 border-green-500 bg-green-50' : 'border-green-500 hover:border-green-600'}`}>
+                          <RadioGroupItem value="2" id="two" className={`mb-2 border-green-500 ${chipCount === '2' ? 'bg-green-500 text-white' : ''}`} />
                           <div className={`text-2xl font-bold ${chipCount === '2' ? 'text-green-600' : 'text-primary'}`}>2</div>
                           <div className="text-sm text-muted-foreground">chips/cracks</div>
                         </Card>
                       </Label>
                       <Label htmlFor="three" className="cursor-pointer">
-                        <Card className={`p-6 text-center transition-all ${chipCount === '3' ? 'ring-2 ring-green-500 border-green-500 bg-green-50' : 'border-muted hover:border-green-500/50'}`}>
-                          <RadioGroupItem value="3" id="three" className={`mb-2 ${chipCount === '3' ? 'border-green-500 text-green-500' : ''}`} />
+                        <Card className={`p-6 text-center transition-all ${chipCount === '3' ? 'ring-2 ring-green-500 border-green-500 bg-green-50' : 'border-green-500 hover:border-green-600'}`}>
+                          <RadioGroupItem value="3" id="three" className={`mb-2 border-green-500 ${chipCount === '3' ? 'bg-green-500 text-white' : ''}`} />
                           <div className={`text-2xl font-bold ${chipCount === '3' ? 'text-green-600' : 'text-primary'}`}>3</div>
                           <div className="text-sm text-muted-foreground">chips/cracks</div>
                         </Card>
