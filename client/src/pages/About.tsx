@@ -45,7 +45,7 @@ const About = () => {
                     <img 
                       src={zIcon} 
                       alt="Zip Glass Logo" 
-                      className="h-40 w-auto"
+                      className="h-32 w-auto"
                       loading="lazy"
                     />
                   </div>
