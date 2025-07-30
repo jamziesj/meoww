@@ -11,7 +11,7 @@ const About = () => {
       
       {/* Hero Section */}
       <section className="relative bg-hero-gradient py-20 overflow-hidden">
-        {/* Background Image with Glassmorphism Effect */}
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
             src="/lovable-uploads/ChatGPT Image Jul 17, 2025, 04_03_56 PM copy.png" 
@@ -21,19 +21,16 @@ const About = () => {
           />
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
-        
-        {/* Glassmorphism overlay */}
-        <div className="absolute inset-0 z-5">
-          <div className="w-full h-full bg-white/10 backdrop-blur-sm border border-white/20"></div>
-        </div>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-              About Zip Glass
-            </h1>
-            <p className="text-xl text-primary-foreground/90 mb-8">
-              Passion-driven service with a commitment to excellence
-            </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-2xl">
+              <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
+                About Zip Glass
+              </h1>
+              <p className="text-xl text-primary-foreground/90 mb-8">
+                Passion-driven service with a commitment to excellence
+              </p>
+            </div>
           </div>
         </div>
       </section>

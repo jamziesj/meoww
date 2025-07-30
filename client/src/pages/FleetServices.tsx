@@ -69,7 +69,7 @@ const FleetServices = () => {
       
       {/* Hero Section */}
       <section className="relative bg-hero-gradient py-20 overflow-hidden">
-        {/* Background Image with Glassmorphism Effect */}
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
             src="/lovable-uploads/ChatGPT Image Jul 17, 2025, 04_03_56 PM.png" 
@@ -79,27 +79,24 @@ const FleetServices = () => {
           />
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
-        
-        {/* Glassmorphism overlay */}
-        <div className="absolute inset-0 z-5">
-          <div className="w-full h-full bg-white/10 backdrop-blur-sm border border-white/20"></div>
-        </div>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <Badge className="bg-primary/20 text-white mb-6 px-4 py-2">
-              Fleet Services
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-              Fleet Windshield Chip Repair & Maintenance
-            </h1>
-            <h2 className="text-xl md:text-2xl text-white/90 mb-8 font-normal">
-              Flexible Mobile Windshield Repair for Commercial Fleets
-            </h2>
-            <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-3xl mx-auto">
-              Whether you're running Amazon delivery vans, U-Haul trucks, Penske rentals, FedEx or UPS routes, 
-              construction vehicles, or a local plumbing or HVAC fleet, windshield chips are a daily battle — 
-              and an overlooked expense.
-            </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-2xl">
+              <Badge className="bg-primary/20 text-white mb-6 px-4 py-2">
+                Fleet Services
+              </Badge>
+              <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
+                Fleet Windshield Chip Repair & Maintenance
+              </h1>
+              <h2 className="text-xl md:text-2xl text-white/90 mb-8 font-normal">
+                Flexible Mobile Windshield Repair for Commercial Fleets
+              </h2>
+              <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-3xl mx-auto">
+                Whether you're running Amazon delivery vans, U-Haul trucks, Penske rentals, FedEx or UPS routes, 
+                construction vehicles, or a local plumbing or HVAC fleet, windshield chips are a daily battle — 
+                and an overlooked expense.
+              </p>
+            </div>
           </div>
         </div>
       </section>

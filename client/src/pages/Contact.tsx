@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Phone, Mail, MapPin, Clock, MessageSquare } from 'lucide-react';
 import { useState } from 'react';
 import { sanitizeInput, validateEmail, validatePhone, validateName, createSecureMailtoLink } from '../../../shared/security';
+import contactBanner from '@assets/contactusbanner_1753907528543.jpg';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -59,16 +60,24 @@ Submitted on: ${new Date().toLocaleString()}
       {/* Hero Section */}
       <section className="relative bg-hero-gradient py-12 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 to-slate-800/70"></div>
+          <img 
+            src={contactBanner} 
+            alt="Contact Us" 
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-black/60"></div>
         </div>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-              Contact Us
-            </h1>
-            <p className="text-xl text-primary-foreground/90 mb-8">
-              Get an expert opinion, estimate on your windshield, or send us a personal message
-            </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-2xl">
+              <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
+                Contact Us
+              </h1>
+              <p className="text-xl text-primary-foreground/90 mb-8">
+                Get an expert opinion, estimate on your windshield, or send us a personal message
+              </p>
+            </div>
           </div>
         </div>
       </section>

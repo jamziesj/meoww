@@ -61,7 +61,7 @@ const DealershipServices = () => {
       
       {/* Hero Section */}
       <section className="relative bg-hero-gradient py-20 overflow-hidden">
-        {/* Background Image with Glassmorphism Effect */}
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
             src="/lovable-uploads/ChatGPT Image Jul 17, 2025, 04_03_56 PM.png" 
@@ -71,26 +71,23 @@ const DealershipServices = () => {
           />
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
-        
-        {/* Glassmorphism overlay */}
-        <div className="absolute inset-0 z-5">
-          <div className="w-full h-full bg-white/10 backdrop-blur-sm border border-white/20"></div>
-        </div>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <Badge className="bg-primary/20 text-white mb-6 px-4 py-2">
-              Dealership Services
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-              Lot Chip Repair Program for Used Car Dealerships
-            </h1>
-            <h2 className="text-xl md:text-2xl text-white/90 mb-8 font-normal">
-              Mobile Windshield Repair for Dealerships — Keep Your Lot Sales-Ready
-            </h2>
-            <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-3xl mx-auto">
-              As a used car dealership, every detail matters. Even a tiny chip on a windshield can reduce 
-              the perceived value of a vehicle, turn away buyers, or lead to costly full replacements.
-            </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-2xl">
+              <Badge className="bg-primary/20 text-white mb-6 px-4 py-2">
+                Dealership Services
+              </Badge>
+              <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
+                Lot Chip Repair Program for Used Car Dealerships
+              </h1>
+              <h2 className="text-xl md:text-2xl text-white/90 mb-8 font-normal">
+                Mobile Windshield Repair for Dealerships — Keep Your Lot Sales-Ready
+              </h2>
+              <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-3xl mx-auto">
+                As a used car dealership, every detail matters. Even a tiny chip on a windshield can reduce 
+                the perceived value of a vehicle, turn away buyers, or lead to costly full replacements.
+              </p>
+            </div>
           </div>
         </div>
       </section>
