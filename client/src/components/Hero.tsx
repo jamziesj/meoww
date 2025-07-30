@@ -26,16 +26,10 @@ const Hero = () => {
                  Mobile Rock Chip Repair Specialists in Omaha
                </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Professional Rock Chip Repair in{' '}
-                <span className="text-primary"> Omaha, Nebraska</span>
+                Save hundreds on replacing your windshield
               </h1>
-              <h2 className="text-xl md:text-2xl text-white/90 mb-8 font-normal">
-                Save Hundreds. No Deductible. Mobile Service.
-              </h2>
               <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-2xl">
-                Don't let a small chip become a costly windshield replacement. Our mobile rock chip 
-                repair service comes to you in Omaha, saving you money, time, and insurance hassles. 
-                Professional repairs in 15-30 minutes with no deductible!
+                Mobile windshield repair that comes to you in Omaha. Save money with professional chip repairs in 15-30 minutes. No deductible required.
               </p>
             </div>
 

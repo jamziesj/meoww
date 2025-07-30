@@ -10,10 +10,12 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
 import { useState } from 'react';
 import { CheckCircle, AlertCircle, Phone, Mail } from 'lucide-react';
+import { useLocation } from 'wouter';
 import { sanitizeInput, validateEmail, validatePhone, validateName, createSecureMailtoLink } from '../../../shared/security';
 import greenWin from '@assets/greenwin_1753840399517.png';
 
 const Quote = () => {
+  const [, navigate] = useLocation();
   const [selectedOption, setSelectedOption] = useState<string>('');
   const [chipCount, setChipCount] = useState<string>('');
   const [customerInfo, setCustomerInfo] = useState({
@@ -82,12 +84,7 @@ const Quote = () => {
       const result = await response.json();
 
       if (result.success) {
-        setSubmitStatus('success');
-        // Reset form
-        setSelectedOption('');
-        setChipCount('');
-        setCustomerInfo({ name: '', phone: '', email: '', description: '' });
-        setErrors({});
+        navigate('/quote-success');
       } else {
         setSubmitStatus('error');
       }

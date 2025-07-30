@@ -11,6 +11,7 @@ import FleetServices from "./pages/FleetServices";
 import DealershipServices from "./pages/DealershipServices";
 import Contact from "./pages/Contact";
 import Quote from "./pages/Quote";
+import QuoteSuccess from "./pages/QuoteSuccess";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
@@ -41,6 +42,7 @@ const App = () => (
         <Route path="/dealership-services" component={DealershipServices} />
         <Route path="/contact" component={Contact} />
         <Route path="/quote" component={Quote} />
+        <Route path="/quote-success" component={QuoteSuccess} />
         <Route path="/privacy-policy" component={PrivacyPolicy} />
         <Route path="/terms-of-service" component={TermsOfService} />
       </Router>
