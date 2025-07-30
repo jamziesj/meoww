@@ -102,13 +102,16 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-2xl">
+              <Badge className="bg-primary/20 text-white mb-6 px-4 py-2">
+                Personal Services
+              </Badge>
               <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-                Windshield Chip Repair Services
+                Rock Chip Repair Service
               </h1>
-              <p className="text-xl text-primary-foreground/90 mb-6">
+              <h2 className="text-xl md:text-2xl text-white/90 mb-8 font-normal">
                 Don't let a small chip turn into a major expense.
-              </p>
-              <p className="text-lg text-primary-foreground/80 mb-8 leading-relaxed">
+              </h2>
+              <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-3xl mx-auto">
                 Windshield chips may seem minor, but they spread quickly due to Nebraska temperature changes, road vibrations, and daily driving stress. Surprise replacements can cost hundreds or even thousands.
               </p>
             </div>
