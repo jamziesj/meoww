@@ -27,7 +27,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-primary text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
@@ -35,14 +35,11 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
               <img 
-                src="/lovable-uploads/9ccc5ea8-9e5f-4dd2-a295-579bca72f167.png" 
-                alt="Omaha Auto Glass Repair" 
-                className="h-10 w-auto"
+                src="/attached_assets/zipglasswide_1753837262278.jpg" 
+                alt="Zip Glass" 
+                className="h-10 w-auto bg-white rounded px-2 py-1"
                 loading="lazy"
               />
-              <div>
-                <h3 className="text-lg font-bold">Omaha Auto Glass Repair</h3>
-              </div>
             </div>
             <p className="text-white/80 mb-6 leading-relaxed">
               Your trusted local auto glass experts providing professional windshield 
@@ -52,23 +49,23 @@ const Footer = () => {
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-primary" />
-                <a href="tel:402-302-2284" className="hover:text-primary transition-colors">
+                <Phone className="h-5 w-5 text-white" />
+                <a href="tel:402-302-2284" className="hover:text-white/80 transition-colors">
                   (402) 302-2284
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-primary" />
-                <a href="mailto:info@zip.glass" className="hover:text-primary transition-colors">
+                <Mail className="h-5 w-5 text-white" />
+                <a href="mailto:info@zip.glass" className="hover:text-white/80 transition-colors">
                   info@zip.glass
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-primary" />
+                <MapPin className="h-5 w-5 text-white" />
                 <span>Serving Greater Omaha Area</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Clock className="h-5 w-5 text-primary" />
+                <Clock className="h-5 w-5 text-white" />
                 <span>Flexible Emergency Service</span>
               </div>
             </div>
@@ -81,7 +78,7 @@ const Footer = () => {
               <li>
                 <Link 
                   to="/services" 
-                  className="text-white/80 hover:text-primary transition-colors"
+                  className="text-white/80 hover:text-white transition-colors"
                 >
                   Rock Chip Repair Service
                 </Link>
@@ -89,7 +86,7 @@ const Footer = () => {
               <li>
                 <Link 
                   to="/dealership-services" 
-                  className="text-white/80 hover:text-primary transition-colors"
+                  className="text-white/80 hover:text-white transition-colors"
                 >
                   Dealership Lot Services
                 </Link>
@@ -97,7 +94,7 @@ const Footer = () => {
               <li>
                 <Link 
                   to="/fleet-services" 
-                  className="text-white/80 hover:text-primary transition-colors"
+                  className="text-white/80 hover:text-white transition-colors"
                 >
                   Commercial Fleet Services
                 </Link>
@@ -134,7 +131,7 @@ const Footer = () => {
                 />
                 <Button 
                   size="sm" 
-                  className="bg-primary hover:bg-primary/90 text-white px-4 rounded-lg"
+                  className="bg-white text-primary hover:bg-white/90 px-4 rounded-lg"
                 >
                   Subscribe
                 </Button>
@@ -149,13 +146,13 @@ const Footer = () => {
               <div className="flex space-x-3">
                 <a 
                   href="#" 
-                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition-colors"
                 >
                   <Facebook className="h-5 w-5" />
                 </a>
                 <a 
                   href="#" 
-                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition-colors"
                 >
                   <Instagram className="h-5 w-5" />
                 </a>
@@ -192,13 +189,13 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
           <div className="text-white/80 text-sm">
-            © {currentYear} Omaha Auto Glass Repair. All rights reserved.
+            © {currentYear} Zip Glass. All rights reserved.
           </div>
           
           <div className="flex items-center space-x-1">
             <div className="flex space-x-1">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                <Star key={i} className="h-4 w-4 fill-white text-white" />
               ))}
             </div>
             <span className="text-sm text-white/80 ml-2">
@@ -207,10 +204,10 @@ const Footer = () => {
           </div>
 
           <div className="flex space-x-6 text-sm">
-            <Link to="/privacy-policy" className="text-white/80 hover:text-primary transition-colors">
+            <Link to="/privacy-policy" className="text-white/80 hover:text-white transition-colors">
               Privacy Policy
             </Link>
-            <Link to="/terms-of-service" className="text-white/80 hover:text-primary transition-colors">
+            <Link to="/terms-of-service" className="text-white/80 hover:text-white transition-colors">
               Terms of Service
             </Link>
           </div>

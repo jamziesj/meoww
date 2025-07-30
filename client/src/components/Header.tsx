@@ -29,18 +29,13 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/9ccc5ea8-9e5f-4dd2-a295-579bca72f167.png" 
-              alt="Omaha Auto Glass Repair" 
-              className="h-10 w-auto"
+              src="/attached_assets/zipglasswide_1753837262278.jpg" 
+              alt="Zip Glass" 
+              className="h-12 w-auto"
               loading="eager"
             />
-            <div className="hidden sm:block">
-              <h1 className="text-lg font-bold text-foreground">
-                Omaha Auto Glass Repair
-              </h1>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}

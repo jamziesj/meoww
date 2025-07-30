@@ -3,10 +3,16 @@ import { Phone, Star } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-[80vh] bg-gradient-to-br from-slate-900 to-slate-800 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.3%22%3E%3Cpath%20d%3D%22M30%2030l15-15v30l-15-15zm-15%2015l15-15v30l-15-15z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+    <section id="home" className="relative min-h-[80vh] overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src="/attached_assets/recreate_1753837118957.webp" 
+          alt="Professional auto glass repair service"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-16 lg:py-24">
@@ -71,8 +77,8 @@ const Hero = () => {
               <div className="text-center">
                 <div className="w-32 h-32 mx-auto mb-6 bg-white rounded-full flex items-center justify-center border-2 border-white/30 shadow-lg">
                   <img 
-                    src="/lovable-uploads/9ccc5ea8-9e5f-4dd2-a295-579bca72f167.png" 
-                    alt="Omaha Auto Glass Repair" 
+                    src="/attached_assets/zipglasswide_1753837262278.jpg" 
+                    alt="Zip Glass" 
                     className="h-20 w-auto"
                     loading="lazy"
                   />

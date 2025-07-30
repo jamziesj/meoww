@@ -243,8 +243,8 @@ const Quote = () => {
               <Card className="mb-8 shadow-xl">
                 <CardContent className="p-8">
                   <div className="text-center">
-                    <AlertCircle className="h-16 w-16 text-amber-500 mx-auto mb-4" />
-                    <h3 className="text-2xl font-bold text-amber-600 mb-4">
+                    <AlertCircle className="h-16 w-16 text-primary mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-primary mb-4">
                       Full Replacement Needed — Service Coming Soon
                     </h3>
                     <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
