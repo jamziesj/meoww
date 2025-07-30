@@ -174,7 +174,7 @@ const Quote = () => {
                         <div className="flex items-center space-x-2 mb-4">
                           <RadioGroupItem value="small" id="small" className={selectedOption === 'small' ? 'border-green-500 text-green-500' : ''} />
                           <span className="text-lg font-semibold">Small Damage</span>
-                          <Badge variant="secondary" className="ml-2 bg-green-100 text-green-800">Repairable</Badge>
+                          <Badge variant="secondary" className="ml-2 bg-green-100 text-green-800 border-green-200">✓ Repairable</Badge>
                         </div>
                         <Card className={`cursor-pointer transition-all ${selectedOption === 'small' ? 'ring-2 ring-green-500 border-green-500' : 'border-muted'}`}>
                           <CardContent className="p-6">

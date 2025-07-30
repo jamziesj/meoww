@@ -81,7 +81,7 @@ const Hero = () => {
                   <img 
                     src={zIcon} 
                     alt="Zip Glass" 
-                    className="h-32 w-auto px-2"
+                    className="h-28 w-28 object-contain"
                     loading="lazy"
                   />
                 </div>
