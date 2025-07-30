@@ -172,7 +172,7 @@ const Quote = () => {
                     <div className="relative">
                       <Label htmlFor="small" className="cursor-pointer">
                         <div className="flex items-center space-x-2 mb-4">
-                          <RadioGroupItem value="small" id="small" className="border-green-500 data-[state=checked]:bg-green-500 data-[state=checked]:text-white" />
+                          <RadioGroupItem value="small" id="small" className={selectedOption === 'small' ? 'border-green-500 bg-green-500 text-white' : 'border-green-500'} />
                           <span className="text-lg font-semibold">Small Damage</span>
                           <Badge variant="secondary" className="ml-2 bg-green-100 text-green-800 border-green-200">✓ Repairable</Badge>
                         </div>
