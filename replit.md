@@ -293,3 +293,4 @@ The application is designed for easy deployment to platforms like Replit, Vercel
 - ✓ **About Page Logo**: Updated About page to use Z icon with 100% larger size and container
 - ✓ **Brand Consistency**: Changed all remaining "Omaha Auto Glass Repair" references to "Zip Glass"
 - ✓ **Quote Page Green Theme**: Updated small damage options to use green checkmark theme instead of red/primary colors
+- ✓ **Logo Sizing Updates**: Increased Z icon size by 75% on hero page (h-36 w-36) and about page (h-40 w-40) with larger containers

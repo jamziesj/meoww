@@ -39,13 +39,13 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <div className="bg-muted/30 rounded-2xl p-8 md:p-12">
               <div className="text-center mb-12">
-                <div className="w-48 h-48 mx-auto mb-6 relative">
+                <div className="w-56 h-56 mx-auto mb-6 relative">
                   <div className="absolute inset-0 bg-primary/20 rounded-full"></div>
                   <div className="w-full h-full bg-white rounded-full flex items-center justify-center shadow-lg">
                     <img 
                       src={zIcon} 
                       alt="Zip Glass Logo" 
-                      className="h-32 w-auto"
+                      className="h-40 w-40 object-contain"
                       loading="lazy"
                     />
                   </div>
