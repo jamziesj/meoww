@@ -89,15 +89,20 @@ const Services = () => {
       
       {/* Hero Section */}
       <section className="relative bg-hero-gradient py-20 overflow-hidden">
-        {/* Background Image with Blur Effect */}
+        {/* Background Image with Glassmorphism Effect */}
         <div className="absolute inset-0 z-0">
           <img 
             src="/lovable-uploads/ChatGPT Image Jul 17, 2025, 04_03_56 PM.png" 
             alt="Background" 
-            className="w-full h-full object-cover opacity-20 blur-sm"
+            className="w-full h-full object-cover"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 to-slate-800/70 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
+        
+        {/* Glassmorphism overlay */}
+        <div className="absolute inset-0 z-5">
+          <div className="w-full h-full bg-white/10 backdrop-blur-sm border border-white/20"></div>
         </div>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -107,9 +112,7 @@ const Services = () => {
             <p className="text-xl text-primary-foreground/90 mb-8">
               Professional rock chip repair that saves you money and time
             </p>
-            <div className="flex items-center justify-center space-x-1 mb-6">
-              <span className="text-primary-foreground/80">Trusted by Omaha drivers</span>
-            </div>
+
           </div>
         </div>
       </section>

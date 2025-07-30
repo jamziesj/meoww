@@ -2,7 +2,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Phone, Mail } from 'lucide-react';
-import zIcon from '@assets/zicon_1753838947122.png';
+import zIconLarge from '@assets/ziconlarge_1753905825908.png';
 
 const About = () => {
   return (
@@ -11,15 +11,20 @@ const About = () => {
       
       {/* Hero Section */}
       <section className="relative bg-hero-gradient py-20 overflow-hidden">
-        {/* Background Image with Blur Effect */}
+        {/* Background Image with Glassmorphism Effect */}
         <div className="absolute inset-0 z-0">
           <img 
             src="/lovable-uploads/ChatGPT Image Jul 17, 2025, 04_03_56 PM copy.png" 
             alt="Background" 
-            className="w-full h-full object-cover opacity-40 blur-[1px]"
+            className="w-full h-full object-cover"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 to-slate-800/60"></div>
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
+        
+        {/* Glassmorphism overlay */}
+        <div className="absolute inset-0 z-5">
+          <div className="w-full h-full bg-white/10 backdrop-blur-sm border border-white/20"></div>
         </div>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -43,7 +48,7 @@ const About = () => {
                   <div className="absolute inset-0 bg-primary/20 rounded-full"></div>
                   <div className="w-full h-full bg-white rounded-full flex items-center justify-center shadow-lg">
                     <img 
-                      src={zIcon} 
+                      src={zIconLarge} 
                       alt="Zip Glass Logo" 
                       className="h-32 w-auto"
                       loading="lazy"

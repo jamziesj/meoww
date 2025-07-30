@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Phone, Star } from 'lucide-react';
 import recreationImage from '@assets/recreation_1753837748382.png';
-import zIcon from '@assets/zicon_1753838947122.png';
+import zIconLarge from '@assets/ziconlarge_1753905825908.png';
 
 const Hero = () => {
   return (
@@ -73,7 +73,7 @@ const Hero = () => {
               <div className="text-center">
                 <div className="w-40 h-40 mx-auto mb-6 bg-white rounded-full flex items-center justify-center border-2 border-white/30 shadow-lg">
                   <img 
-                    src={zIcon} 
+                    src={zIconLarge} 
                     alt="Zip Glass" 
                     className="h-28 w-28 object-contain"
                     loading="lazy"

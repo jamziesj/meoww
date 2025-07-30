@@ -241,6 +241,13 @@ The application is designed for easy deployment to platforms like Replit, Vercel
 - ✓ **Vite Security**: Confirmed Vite at version 5.4.19 addressing known vulnerabilities
 - ✓ **Drizzle Kit Update**: Updated to version 0.31.4 to resolve nested dependency issues
 
+### UI/UX Improvements (January 2025)
+- ✓ **Header Logo Fix**: Aligned Zip Glass logo to far left on desktop view
+- ✓ **Icon Updates**: Replaced Z icons on hero and about pages with new ziconlarge asset
+- ✓ **Glassmorphism Effects**: Updated About, Services, Fleet, and Dealership pages with rectangular glassmorphism overlays
+- ✓ **Content Cleanup**: Removed "Trusted by Omaha Drivers" text from all service pages (kept on home page only)
+- ✓ **Scroll Behavior**: ScrollToTop component ensures users start at page top when navigating
+
 ### Performance Optimization & Stability Measures (January 2025)
 - ✓ Lazy loading: Implemented for all images across the website (loading="lazy" for non-critical images)
 - ✓ Critical resource preloading: Added preload for logo image and font connections
