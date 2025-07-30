@@ -26,10 +26,10 @@ const Hero = () => {
                  Mobile Rock Chip Repair Specialists in Omaha
                </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Save hundreds on replacing your windshield
+                Local Care Makes the Difference
               </h1>
               <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-2xl">
-                Mobile windshield repair that comes to you in Omaha. Save money with professional chip repairs in 15-30 minutes. No deductible required.
+                Small chips spread fast in Omaha weather, turning into costly cracks requiring full replacement. What is an affordable fix today becomes $500+ tomorrow.
               </p>
             </div>
 
@@ -89,19 +89,19 @@ const Hero = () => {
                 <div className="space-y-3">
                   <div className="flex items-center justify-center space-x-3 text-white">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span>No Glass Warping</span>
+                    <span>Same-day service from trusted Omaha professionals</span>
                   </div>
                   <div className="flex items-center justify-center space-x-3 text-white">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span>Same-Day Mobile Service</span>
+                    <span>Don't get pressured into unnecessary replacement</span>
                   </div>
                   <div className="flex items-center justify-center space-x-3 text-white">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span>15-30 Minute Repairs</span>
+                    <span>Personal attention, not corporate call centers</span>
                   </div>
                   <div className="flex items-center justify-center space-x-3 text-white">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span>Save $300-800+</span>
+                    <span>15-30 minute repairs at your location</span>
                   </div>
                 </div>
               </div>
