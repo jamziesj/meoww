@@ -163,7 +163,7 @@ const Footer = () => {
       </div>
 
       {/* Emergency Banner */}
-      <div className="bg-primary text-white py-4">
+      <div className="bg-secondary text-white py-4">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-3 mb-2 md:mb-0">

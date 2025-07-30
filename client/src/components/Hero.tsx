@@ -7,7 +7,7 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
-          src="/attached_assets/recreate_1753837118957.webp" 
+          src="/attached_assets/recreation_1753837748382.png" 
           alt="Professional auto glass repair service"
           className="w-full h-full object-cover"
           loading="eager"
@@ -79,7 +79,7 @@ const Hero = () => {
                   <img 
                     src="/attached_assets/zipglasswide_1753837262278.jpg" 
                     alt="Zip Glass" 
-                    className="h-20 w-auto"
+                    className="h-16 w-auto px-2"
                     loading="lazy"
                   />
                 </div>
@@ -96,7 +96,7 @@ const Hero = () => {
                     <span>No Glass Warping</span>
                   </div>
                   <div className="flex items-center justify-center space-x-3 text-white">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <div className="w-2 h-2 bg-secondary rounded-full"></div>
                     <span>Same-Day Mobile Service</span>
                   </div>
                   <div className="flex items-center justify-center space-x-3 text-white">
@@ -104,7 +104,7 @@ const Hero = () => {
                     <span>15-30 Minute Repairs</span>
                   </div>
                   <div className="flex items-center justify-center space-x-3 text-white">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <div className="w-2 h-2 bg-secondary rounded-full"></div>
                     <span>Save $300-800+</span>
                   </div>
                 </div>
