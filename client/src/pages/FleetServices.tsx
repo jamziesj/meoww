@@ -19,6 +19,7 @@ import {
   Wrench,
   Bus
 } from 'lucide-react';
+import fleetBg from '@assets/fleetb_1753911499786.jpg';
 
 const FleetServices = () => {
 
@@ -72,7 +73,7 @@ const FleetServices = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/lovable-uploads/fleetb_1753911499786.jpg" 
+            src={fleetBg} 
             alt="Fleet background" 
             className="w-full h-full object-cover opacity-40 blur-[1px]"
             loading="lazy"

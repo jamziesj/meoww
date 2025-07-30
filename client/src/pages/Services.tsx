@@ -15,6 +15,7 @@ import {
   Phone,
   Star
 } from 'lucide-react';
+import chipBg from '@assets/chipb_1753913145923.jpg';
 
 const Services = () => {
   useEffect(() => {
@@ -96,7 +97,7 @@ const Services = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/lovable-uploads/chipb_1753913145923.jpg" 
+            src={chipBg} 
             alt="Chip repair background" 
             className="w-full h-full object-cover opacity-40 blur-[1px]"
             loading="lazy"

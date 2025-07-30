@@ -13,6 +13,7 @@ import { CheckCircle, AlertCircle, Phone, Mail } from 'lucide-react';
 import { useLocation } from 'wouter';
 import { sanitizeInput, validateEmail, validatePhone, validateName, createSecureMailtoLink } from '../../../shared/security';
 import greenWin from '@assets/greenwin_1753840399517.png';
+import quoteBg from '@assets/quoteb_1753914215300.jpg';
 
 const Quote = () => {
   const [, navigate] = useLocation();
@@ -110,10 +111,10 @@ const Quote = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-hero-gradient py-20 overflow-hidden">
+      <section className="relative bg-hero-gradient py-12 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/lovable-uploads/quoteb_1753914215300.jpg" 
+            src={quoteBg} 
             alt="Windshield quote background" 
             className="w-full h-full object-cover opacity-40 blur-[1px]"
             loading="lazy"
@@ -122,11 +123,11 @@ const Quote = () => {
         </div>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-2xl">
-              <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-2xl">
+              <h1 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
                 Get Your Free Quote
               </h1>
-              <p className="text-xl text-primary-foreground/90 mb-8">
+              <p className="text-lg text-primary-foreground/90 mb-4">
                 Tell us about your windshield damage and we'll provide you with a personalized quote
               </p>
             </div>

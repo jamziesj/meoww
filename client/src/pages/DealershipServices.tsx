@@ -17,6 +17,7 @@ import {
   TrendingUp,
   Users
 } from 'lucide-react';
+import dealerBg from '@assets/dealerb_1753912506919.jpg';
 
 const DealershipServices = () => {
   useEffect(() => {
@@ -68,7 +69,7 @@ const DealershipServices = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/lovable-uploads/dealerb_1753912506919.jpg" 
+            src={dealerBg} 
             alt="Dealership background" 
             className="w-full h-full object-cover opacity-40 blur-[1px]"
             loading="lazy"
