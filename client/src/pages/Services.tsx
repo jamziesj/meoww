@@ -42,6 +42,11 @@ const Services = () => {
       step: 5,
       title: "Finishing",
       description: "Polish and inspect to ensure the repair meets our quality standards"
+    },
+    {
+      step: 6,
+      title: "Quality Check",
+      description: "Final inspection and customer approval to guarantee satisfaction with the completed repair"
     }
   ];
 
@@ -152,27 +157,30 @@ const Services = () => {
               Our Repair Process
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Our proven 5-step process ensures a professional, long-lasting repair that 
+              Our proven 6-step process ensures a professional, long-lasting repair that 
               restores your windshield's strength and clarity.
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="grid gap-8">
+            <div className="space-y-4">
               {repairProcess.map((step, index) => (
-                <div key={index} className="flex items-start space-x-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-lg">
+                <div 
+                  key={index} 
+                  className="relative bg-gradient-to-r from-primary/5 to-transparent rounded-lg p-6 border border-primary/10 hover:border-primary/20 transition-colors"
+                >
+                  <div className="flex items-center space-x-4">
+                    <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/80 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">
                       {step.step}
                     </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-foreground mb-2">
-                      {step.title}
-                    </h3>
-                    <p className="text-muted-foreground">
-                      {step.description}
-                    </p>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold text-foreground mb-2">
+                        {step.title}
+                      </h3>
+                      <p className="text-muted-foreground">
+                        {step.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}

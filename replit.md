@@ -295,3 +295,5 @@ The application is designed for easy deployment to platforms like Replit, Vercel
 - ✓ **Quote Page Green Theme**: Updated small damage options to use green checkmark theme instead of red/primary colors
 - ✓ **Radio Button Fix**: Fixed small damage radio button to fill with green when selected (matching large damage behavior)
 - ✓ **Logo Sizing Revert**: Reverted logo zoom increase back to original sizes on hero and about pages
+- ✓ **Quote Page Numbers**: Updated chip count numbers to always show green color before selection
+- ✓ **Repair Process Update**: Changed Services page repair process to gradient format matching fleet page with numbered circles (1-6 steps)
