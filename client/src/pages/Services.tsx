@@ -105,8 +105,11 @@ const Services = () => {
               <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
                 Windshield Chip Repair Services
               </h1>
-              <p className="text-xl text-primary-foreground/90 mb-8">
-                Professional rock chip repair that saves you money and time
+              <p className="text-xl text-primary-foreground/90 mb-6">
+                Don't let a small chip turn into a major expense.
+              </p>
+              <p className="text-lg text-primary-foreground/80 mb-8 leading-relaxed">
+                Windshield chips may seem minor, but they spread quickly due to Nebraska temperature changes, road vibrations, and daily driving stress. Surprise replacements can cost hundreds or even thousands.
               </p>
             </div>
           </div>

@@ -24,6 +24,17 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-2xl">
+              <div className="w-48 h-48 mx-auto mb-6 relative">
+                <div className="absolute inset-0 bg-primary/20 rounded-full"></div>
+                <div className="w-full h-full bg-white rounded-full flex items-center justify-center shadow-lg">
+                  <img 
+                    src={zIconLarge} 
+                    alt="Zip Glass Logo" 
+                    className="h-32 w-auto"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
               <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
                 About Zip Glass
               </h1>
@@ -41,17 +52,6 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <div className="bg-muted/30 rounded-2xl p-8 md:p-12">
               <div className="text-center mb-12">
-                <div className="w-48 h-48 mx-auto mb-6 relative">
-                  <div className="absolute inset-0 bg-primary/20 rounded-full"></div>
-                  <div className="w-full h-full bg-white rounded-full flex items-center justify-center shadow-lg">
-                    <img 
-                      src={zIconLarge} 
-                      alt="Zip Glass Logo" 
-                      className="h-32 w-auto"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
                 <h2 className="text-3xl font-bold text-foreground mb-8">
                   Our Story
                 </h2>
