@@ -153,13 +153,49 @@ const Header = () => {
               >
                 About Us
               </Link>
-              <Link
-                to="/services"
-                className="text-foreground hover:text-primary transition-colors px-2 py-2 font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Our Services
-              </Link>
+              <div className="relative">
+                <button 
+                  className="text-foreground hover:text-primary transition-colors px-2 py-2 font-medium flex items-center justify-between w-full"
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                >
+                  <span>Our Services</span>
+                  <ChevronDown className="h-4 w-4" />
+                </button>
+                {isServicesOpen && (
+                  <div className="ml-4 mt-2 space-y-2 border-l-2 border-primary/20 pl-4">
+                    <Link
+                      to="/services"
+                      className="block text-foreground hover:text-primary transition-colors py-1 text-sm"
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        setIsServicesOpen(false);
+                      }}
+                    >
+                      Rock Chip Repair Service
+                    </Link>
+                    <Link
+                      to="/dealership-services"
+                      className="block text-foreground hover:text-primary transition-colors py-1 text-sm"
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        setIsServicesOpen(false);
+                      }}
+                    >
+                      Dealership Lot Services
+                    </Link>
+                    <Link
+                      to="/fleet-services"
+                      className="block text-foreground hover:text-primary transition-colors py-1 text-sm"
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        setIsServicesOpen(false);
+                      }}
+                    >
+                      Commercial Fleet Services
+                    </Link>
+                  </div>
+                )}
+              </div>
               <a
                 href="/contact"
                 className="text-foreground hover:text-primary transition-colors px-2 py-2 font-medium"

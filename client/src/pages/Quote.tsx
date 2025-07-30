@@ -216,21 +216,21 @@ const Quote = () => {
                         <Card className={`p-6 text-center transition-all ${chipCount === '1' ? 'ring-2 ring-green-500 border-green-500 bg-green-50' : 'border-green-500 hover:border-green-600'}`}>
                           <RadioGroupItem value="1" id="one" className={`mb-2 border-green-500 ${chipCount === '1' ? 'bg-green-500 text-white' : ''}`} />
                           <div className={`text-2xl font-bold ${chipCount === '1' ? 'text-green-600' : 'text-green-600'}`}>1</div>
-                          <div className="text-sm text-muted-foreground">chip/crack</div>
+                          <div className="text-sm text-muted-foreground text-center">chip/crack</div>
                         </Card>
                       </Label>
                       <Label htmlFor="two" className="cursor-pointer">
                         <Card className={`p-6 text-center transition-all ${chipCount === '2' ? 'ring-2 ring-green-500 border-green-500 bg-green-50' : 'border-green-500 hover:border-green-600'}`}>
                           <RadioGroupItem value="2" id="two" className={`mb-2 border-green-500 ${chipCount === '2' ? 'bg-green-500 text-white' : ''}`} />
                           <div className={`text-2xl font-bold ${chipCount === '2' ? 'text-green-600' : 'text-green-600'}`}>2</div>
-                          <div className="text-sm text-muted-foreground">chips/cracks</div>
+                          <div className="text-sm text-muted-foreground text-center">chips/cracks</div>
                         </Card>
                       </Label>
                       <Label htmlFor="three" className="cursor-pointer">
                         <Card className={`p-6 text-center transition-all ${chipCount === '3' ? 'ring-2 ring-green-500 border-green-500 bg-green-50' : 'border-green-500 hover:border-green-600'}`}>
                           <RadioGroupItem value="3" id="three" className={`mb-2 border-green-500 ${chipCount === '3' ? 'bg-green-500 text-white' : ''}`} />
                           <div className={`text-2xl font-bold ${chipCount === '3' ? 'text-green-600' : 'text-green-600'}`}>3</div>
-                          <div className="text-sm text-muted-foreground">chips/cracks</div>
+                          <div className="text-sm text-muted-foreground text-center">chips/cracks</div>
                         </Card>
                       </Label>
                     </div>
