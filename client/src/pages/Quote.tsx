@@ -172,7 +172,7 @@ const Quote = () => {
                     <div className="relative">
                       <Label htmlFor="small" className="cursor-pointer">
                         <div className="flex items-center space-x-2 mb-4">
-                          <RadioGroupItem value="small" id="small" className={selectedOption === 'small' ? 'border-green-500 text-green-500' : ''} />
+                          <RadioGroupItem value="small" id="small" className="border-green-500 data-[state=checked]:bg-green-500 data-[state=checked]:text-white" />
                           <span className="text-lg font-semibold">Small Damage</span>
                           <Badge variant="secondary" className="ml-2 bg-green-100 text-green-800 border-green-200">✓ Repairable</Badge>
                         </div>
@@ -243,8 +243,8 @@ const Quote = () => {
               <Card className="mb-8 shadow-xl">
                 <CardContent className="p-8">
                   <div className="text-center">
-                    <AlertCircle className="h-16 w-16 text-primary mx-auto mb-4" />
-                    <h3 className="text-2xl font-bold text-primary mb-4">
+                    <AlertCircle className="h-16 w-16 text-orange-500 mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-orange-600 mb-4">
                       Full Replacement Needed — Service Coming Soon
                     </h3>
                     <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
