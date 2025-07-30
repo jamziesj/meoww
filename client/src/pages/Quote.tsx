@@ -8,7 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { CheckCircle, AlertCircle, Phone, Mail } from 'lucide-react';
 import { useLocation } from 'wouter';
 import { sanitizeInput, validateEmail, validatePhone, validateName, createSecureMailtoLink } from '../../../shared/security';
@@ -16,6 +16,10 @@ import greenWin from '@assets/greenwin_1753840399517.png';
 
 const Quote = () => {
   const [, navigate] = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [selectedOption, setSelectedOption] = useState<string>('');
   const [chipCount, setChipCount] = useState<string>('');
   const [customerInfo, setCustomerInfo] = useState({
@@ -343,7 +347,7 @@ const Quote = () => {
                     type="submit" 
                     onClick={handleSubmit}
                     disabled={!canSubmit || isSubmitting}
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 text-lg font-semibold"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white py-3 text-lg font-semibold"
                   >
                     {isSubmitting ? (
                       <>

@@ -22,7 +22,14 @@ const ScrollToTop = () => {
   const [pathname] = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Use requestAnimationFrame to ensure it runs after the route change
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      // Fallback to ensure scroll happens
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 50);
+    });
   }, [pathname]);
 
   return null;

@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { useEffect } from 'react';
 import { 
   Phone, 
   Mail, 
@@ -18,6 +19,9 @@ import {
 } from 'lucide-react';
 
 const DealershipServices = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const benefits = [
     {

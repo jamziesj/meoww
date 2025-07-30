@@ -2,9 +2,13 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Phone, Mail } from 'lucide-react';
+import { useEffect } from 'react';
 import zIconLarge from '@assets/ziconlarge_1753905825908.png';
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen scroll-container">
       <Header />
