@@ -1,5 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Phone, Star } from 'lucide-react';
+import recreationImage from '@assets/recreation_1753837748382.png';
+import zipGlassLogo from '@assets/zipglasswide_1753837262278.jpg';
 
 const Hero = () => {
   return (
@@ -7,7 +9,7 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
-          src="/attached_assets/recreation_1753837748382.png" 
+          src={recreationImage} 
           alt="Professional auto glass repair service"
           className="w-full h-full object-cover"
           loading="eager"
@@ -77,7 +79,7 @@ const Hero = () => {
               <div className="text-center">
                 <div className="w-32 h-32 mx-auto mb-6 bg-white rounded-full flex items-center justify-center border-2 border-white/30 shadow-lg">
                   <img 
-                    src="/attached_assets/zipglasswide_1753837262278.jpg" 
+                    src={zipGlassLogo} 
                     alt="Zip Glass" 
                     className="h-16 w-auto px-2"
                     loading="lazy"

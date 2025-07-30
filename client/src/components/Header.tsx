@@ -3,6 +3,7 @@ import { Link, useLocation } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import zipGlassLogo from '@assets/zipglasswide_1753837262278.jpg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,7 +32,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="/attached_assets/zipglasswide_1753837262278.jpg" 
+              src={zipGlassLogo} 
               alt="Zip Glass" 
               className="h-12 w-auto"
               loading="eager"

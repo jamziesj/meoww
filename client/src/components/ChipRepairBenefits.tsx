@@ -74,41 +74,8 @@ const ChipRepairBenefits = () => {
             Don't let a small chip turn into a costly replacement. Our professional chip repair service 
             offers significant advantages that save you money, time, and hassle.
           </p>
-          <div className="bg-primary rounded-2xl p-8 md:p-12 text-center max-w-4xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-6">
-              Don't Let a Small Chip Become a Big Problem
-            </h3>
-            <p className="text-lg text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
-              Temperature changes, road vibrations, and impacts can turn a small chip into a large crack. 
-              Act fast to save hundreds of dollars and avoid the hassle of windshield replacement.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4"
-                asChild
-              >
-                <a href="/quote" className="flex items-center space-x-2">
-                  <CheckCircle className="h-5 w-5" />
-                  <span>Get Free Quote</span>
-                </a>
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-primary-foreground text-black hover:text-white hover:bg-primary-foreground px-8 py-4 relative overflow-hidden group"
-                asChild
-              >
-                <a href="tel:402-302-2284" className="flex items-center space-x-2">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary-light to-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
-                  <Phone className="h-5 w-5 relative z-10" />
-                  <span className="relative z-10">Call Now</span>
-                </a>
-              </Button>
-            </div>
-            <p className="text-primary-foreground/80 mt-6 text-sm">
-              ⚡ Act Fast: Chips spread quickly in Nebraska weather
-            </p>
+          <div className="inline-flex items-center bg-primary/10 rounded-full px-6 py-3 border border-primary/20">
+            <span className="text-primary font-semibold text-sm">⚡ Act Fast: Chips spread quickly in Nebraska weather</span>
           </div>
         </div>
 
