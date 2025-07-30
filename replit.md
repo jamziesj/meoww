@@ -217,13 +217,16 @@ The application is designed for easy deployment to platforms like Replit, Vercel
 - ✓ Fleet services: Updated titles and descriptions to use "Flexible" instead of "24/7"
 
 ### Hero Page Content Update (January 2025)
-- ✓ **Title Change**: Updated from "Save hundreds on replacing your windshield" to "Local Care Makes the Difference"
-- ✓ **Description Update**: Changed to focus on Omaha weather damage and cost escalation messaging
-- ✓ **Bullet Points Refresh**: Updated all 4 service highlights to emphasize local care:
-  - Same-day service from trusted Omaha professionals
-  - Don't get pressured into unnecessary replacement  
-  - Personal attention, not corporate call centers
+- ✓ **Main Title**: Reverted to "Save hundreds on replacing your windshield"
+- ✓ **Main Description**: Reverted to original mobile repair messaging
+- ✓ **Right Section Update**: Moved "Local Care Makes the Difference" messaging to icon section
+- ✓ **Right Section Content**: Updated with Omaha weather damage and cost escalation messaging
+- ✓ **Bullet Points Optimization**: Shortened text for mobile-friendly single-line display:
+  - Same-day or next day service
+  - We don't pressure unnecessary replacement
+  - Personal help, not corporate call centers
   - 15-30 minute repairs at your location
+- ✓ **Mobile Responsive**: Added text-sm on mobile and text-base on larger screens for better readability
 
 ### Email System Status (January 2025)
 - ✓ **Quote Form Functionality**: Quote form properly captures and logs all customer information
