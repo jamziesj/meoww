@@ -111,7 +111,7 @@ const Quote = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-hero-gradient py-12 overflow-hidden">
+      <section className="relative bg-hero-gradient py-8 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={quoteBg} 
@@ -122,13 +122,13 @@ const Quote = () => {
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center relative z-10">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-2xl">
-              <h1 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+          <div className="max-w-3xl mx-auto text-center relative z-10">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 shadow-2xl">
+              <h1 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-2">
                 Get Your Free Quote
               </h1>
-              <p className="text-lg text-primary-foreground/90 mb-4">
-                Tell us about your windshield damage and we'll provide you with a personalized quote
+              <p className="text-base text-primary-foreground/90">
+                Tell us about your damage for a personalized quote
               </p>
             </div>
           </div>
