@@ -284,3 +284,7 @@ The application is designed for easy deployment to platforms like Replit, Vercel
 - ✓ **Services Page CTA**: Moved the dealership-style warning box from home page to Services page CTA section
 - ✓ **Home Page Revert**: Restored home page chip warning to original pill-style design
 - ✓ **TypeScript Fixes**: Resolved all TypeScript errors for proper image event handling
+- ✓ **Footer Updates**: Removed failed image embed, replaced with text logo, updated Instagram link to https://www.instagram.com/zipglass/#
+- ✓ **Hero Logo Update**: Changed hero logo to new Z icon (zicon.png) instead of wide logo
+- ✓ **Hero Bullets Fix**: Made all hero page bullets red instead of alternating red/black
+- ✓ **Header Text Color**: Changed header text from light gray to charcoal (slate-800) for better readability

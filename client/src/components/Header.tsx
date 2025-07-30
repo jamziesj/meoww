@@ -26,7 +26,7 @@ const Header = () => {
     setCloseTimeout(timeout);
   };
   return (
-    <header className="bg-white text-foreground sticky top-0 z-50 shadow-sm border-b border-border">
+    <header className="bg-white text-slate-800 sticky top-0 z-50 shadow-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}

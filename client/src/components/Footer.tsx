@@ -34,12 +34,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <img 
-                src="/attached_assets/zipglasswide_1753837262278.jpg" 
-                alt="Zip Glass" 
-                className="h-10 w-auto bg-white rounded px-2 py-1"
-                loading="lazy"
-              />
+              <h3 className="text-2xl font-bold text-white">Zip Glass</h3>
             </div>
             <p className="text-white/80 mb-6 leading-relaxed">
               Your trusted local auto glass experts providing professional windshield 
@@ -151,8 +146,10 @@ const Footer = () => {
                   <Facebook className="h-5 w-5" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.instagram.com/zipglass/#" 
                   className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Instagram className="h-5 w-5" />
                 </a>

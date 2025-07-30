@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Phone, Star } from 'lucide-react';
 import recreationImage from '@assets/recreation_1753837748382.png';
-import zipGlassLogo from '@assets/zipglasswide_1753837262278.jpg';
+import zIcon from '@assets/zicon_1753838947122.png';
 
 const Hero = () => {
   return (
@@ -79,7 +79,7 @@ const Hero = () => {
               <div className="text-center">
                 <div className="w-32 h-32 mx-auto mb-6 bg-white rounded-full flex items-center justify-center border-2 border-white/30 shadow-lg">
                   <img 
-                    src={zipGlassLogo} 
+                    src={zIcon} 
                     alt="Zip Glass" 
                     className="h-16 w-auto px-2"
                     loading="lazy"
@@ -98,7 +98,7 @@ const Hero = () => {
                     <span>No Glass Warping</span>
                   </div>
                   <div className="flex items-center justify-center space-x-3 text-white">
-                    <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
                     <span>Same-Day Mobile Service</span>
                   </div>
                   <div className="flex items-center justify-center space-x-3 text-white">
@@ -106,7 +106,7 @@ const Hero = () => {
                     <span>15-30 Minute Repairs</span>
                   </div>
                   <div className="flex items-center justify-center space-x-3 text-white">
-                    <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
                     <span>Save $300-800+</span>
                   </div>
                 </div>
