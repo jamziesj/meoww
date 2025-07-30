@@ -91,32 +91,32 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 20%;
 
-    /* Teal brand colors from logo */
-    --primary: 173 70% 41%;
+    /* Red brand color #ec192f */
+    --primary: 350 86% 51%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 173 70% 51%;
-    --primary-dark: 173 70% 31%;
+    --primary-light: 350 86% 61%;
+    --primary-dark: 350 86% 41%;
 
-    /* Navy colors from logo */
-    --secondary: 0 0% 20%;
+    /* Black secondary color #000000 */
+    --secondary: 0 0% 0%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 173 70% 96%;
-    --accent-foreground: 173 70% 31%;
+    --accent: 350 86% 96%;
+    --accent-foreground: 350 86% 51%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 0 0% 85%;
     --input: 0 0% 85%;
-    --ring: 173 70% 41%;
+    --ring: 350 86% 51%;
 
     /* Hero gradient */
-    --hero-gradient: linear-gradient(135deg, hsl(0 0% 20%), hsl(0 0% 15%));
-    --hero-overlay: linear-gradient(135deg, hsl(0 0% 20% / 0.95), hsl(0 0% 15% / 0.95));
+    --hero-gradient: linear-gradient(135deg, hsl(0 0% 0%), hsl(0 0% 10%));
+    --hero-overlay: linear-gradient(135deg, hsl(0 0% 0% / 0.95), hsl(0 0% 10% / 0.95));
 
     /* Glass effect */
     --glass-bg: 0 0% 100% / 0.1;
@@ -151,28 +151,28 @@ All colors MUST be HSL.
     --popover: 0 0% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 173 70% 51%;
-    --primary-foreground: 0 0% 4%;
-    --primary-light: 173 70% 61%;
-    --primary-dark: 173 70% 41%;
+    --primary: 350 86% 51%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 350 86% 61%;
+    --primary-dark: 350 86% 41%;
 
-    --secondary: 0 0% 15%;
+    --secondary: 0 0% 0%;
     --secondary-foreground: 0 0% 98%;
 
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 173 70% 15%;
-    --accent-foreground: 173 70% 61%;
+    --accent: 350 86% 15%;
+    --accent-foreground: 350 86% 61%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 15%;
     --input: 0 0% 15%;
-    --ring: 173 70% 51%;
+    --ring: 350 86% 51%;
 
-    --hero-gradient: linear-gradient(135deg, hsl(0 0% 15%), hsl(0 0% 10%));
+    --hero-gradient: linear-gradient(135deg, hsl(0 0% 0%), hsl(0 0% 5%));
     --hero-overlay: linear-gradient(135deg, hsl(0 0% 15% / 0.95), hsl(0 0% 10% / 0.95));
 
     --glass-bg: 0 0% 100% / 0.05;
