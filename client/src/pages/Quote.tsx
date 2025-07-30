@@ -11,6 +11,7 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { useState } from 'react';
 import { CheckCircle, AlertCircle, Phone, Mail } from 'lucide-react';
 import { sanitizeInput, validateEmail, validatePhone, validateName, createSecureMailtoLink } from '../../../shared/security';
+import greenWin from '@assets/greenwin_1753840399517.png';
 
 const Quote = () => {
   const [selectedOption, setSelectedOption] = useState<string>('');
@@ -180,7 +181,7 @@ const Quote = () => {
                           <CardContent className="p-6">
                             <div className="relative h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                               <img 
-                                src="/newgwin.png" 
+                                src={greenWin} 
                                 alt="Windshield with small chips and cracks" 
                                 className="w-full h-full object-cover scale-[3]"
                                 loading="lazy"
